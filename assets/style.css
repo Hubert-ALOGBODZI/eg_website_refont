@@ -27,6 +27,7 @@ body {
     align-items: center;
     background-color: #ffffffF0;
     position: sticky;
+    top: 0;
 }
 
 .menu_items {
@@ -61,21 +62,30 @@ body {
     height: 30px;
 }
 
-.menu_bottom{
+.menu_bottom {
     display: none;
 }
 
 @media (max-width: 1000px) {
-    .logo_img{
+    .logo_img {
         width: 60%;
         align-items: center;
     }
-    .menu{
+
+    .menu {
         display: none;
     }
-    .menu_bottom{
+
+    .langfr,
+    .langen {
+        width: 30px;
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    .menu_bottom {
         display: flex;
-        position: absolute;
+        position: fixed;
         bottom: 10px;
         left: 50%;
         transform: translatex(-50%);
@@ -83,10 +93,86 @@ body {
         list-style: none;
         justify-content: space-around;
         padding: 20px;
-        background-color: gray;
+        background-color: #8080807c;
         border-radius: 30px;
         backdrop-filter: blur(10px);
     }
 }
 
 /********** End menu for all pages ***************/
+
+
+/********** Start Energy Home page ***************/
+
+.bus_home {
+    width: 100%;
+}
+
+.banner_img {
+    width: 100%;
+}
+
+.bus_bann_text_container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.busbann_img_logo {
+    width: fit-content;
+    margin-right: 20px;
+    min-width: 120px;
+    max-width: 450px;
+    padding: max(13px, min(2vw, 30px)) max(20px, min(3vw, 30px));
+    background-color: #f3f3f3;
+}
+
+.busbann_text_cont {
+    font-size: max(30px, min(6vw, 80px));
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: #86837F 2px;
+}
+
+.bus_title_text {
+    display: grid;
+    width: 100%;
+}
+
+.bus_gtitle_text {
+    margin: 0 auto;
+    max-width: 60%;
+    font-size: max(23px, min(4vw, 80px));
+    text-align: center;
+    font-weight: 700;
+    color: #EDB248;
+}
+
+.gray_color {
+    color: #BAB3A8;
+}
+
+.bus_little_text {
+    position: relative;
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+}
+
+.bus_little_text::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    background-color: #f3f3f3;
+}
+
+/********** End Energy Home page ***************/
