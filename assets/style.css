@@ -28,6 +28,7 @@ body {
     background-color: #ffffffF0;
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 .menu_items {
@@ -84,6 +85,7 @@ body {
     }
 
     .menu_bottom {
+        z-index: 99;
         display: flex;
         position: fixed;
         bottom: 10px;
@@ -176,3 +178,90 @@ body {
 }
 
 /********** End Energy Home page ***************/
+
+
+/********** Start Declaration section page ***************/
+
+.declaration{
+    position: relative;
+    margin: 70px 0;
+}
+
+.declaration::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 34px;
+    width: 80%;
+    background-color: #EFBC6F;
+    border-radius: 50px;
+}
+
+.declaration_text_cont{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 80px 170px;
+    flex-wrap: wrap;
+    background-color: #EFBC6F;
+}
+
+.left_declar_text{
+    display: block;
+    width: 45%;
+    min-width: 200px;
+    max-width: 740px;
+}
+
+.quote_img{
+    width: 51px;
+    height: 51px;
+    margin-bottom: 42px;
+}
+
+.quote_img img{
+    width: 100%;
+}
+
+.left_declare_par{
+    font-size: max(24px, 40px);
+    font-weight: 700;
+}
+
+.declar_author{
+    width: 100%;
+    text-align: right;
+    font-size: max(18px, 27px);
+    margin-top: 70px;
+}
+
+.right_declar_text{
+    display: block;
+    width: 45%;
+    min-width: 200px;
+    max-width: 740px;
+    font-size: max(20px, 30px);
+    margin-top: 90px;
+}
+
+.top_par{
+    margin-bottom: 100px;
+}
+
+.declar_video_cont{
+    margin: -90px auto 0;
+    min-width: 240px;
+    min-height: 120px;
+    width: 70vw;
+    height: 38vw;
+}
+
+.declar_video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/********** End Declaration section page ***************/
