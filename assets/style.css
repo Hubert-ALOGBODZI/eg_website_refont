@@ -1,6 +1,92 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: 0;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/**************************************/
+
+/********** Menu for all pages ***************/
+
+.menu_bar {
+    width: 100%;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffF0;
+    position: sticky;
+}
+
+.menu_items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    padding: 0 10px;
+}
+
+.lang {
+    margin-right: 10px;
+    display: flex;
+    height: 30px;
+}
+
+.lang span {
+    display: block;
+}
+
+.langfr,
+.langen {
+    width: 50px;
+    height: 30px;
+}
+
+.menu_bottom{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .logo_img{
+        width: 60%;
+        align-items: center;
+    }
+    .menu{
+        display: none;
+    }
+    .menu_bottom{
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 90%;
+        list-style: none;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: gray;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+    }
+}
+
+/********** End menu for all pages ***************/
