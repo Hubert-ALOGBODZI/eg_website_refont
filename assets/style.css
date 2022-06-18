@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffffF0;
+    background-color: #ffffffB0;
     position: sticky;
     top: 0;
     z-index: 99;
@@ -167,7 +167,7 @@ body {
     width: 100%;
 }
 
-.bus_little_text::before{
+.bus_little_text::before {
     content: "";
     position: absolute;
     width: 20%;
@@ -182,24 +182,24 @@ body {
 
 /********** Start Declaration section page ***************/
 
-.declaration{
+.declaration {
     position: relative;
     margin: 70px 0;
 }
 
-.declaration::before{
+.declaration::before {
     content: "";
     position: absolute;
     top: 0%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 34px;
     width: 80%;
     background-color: #EFBC6F;
     border-radius: 50px;
 }
 
-.declaration_text_cont{
+.declaration_text_cont {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -208,36 +208,36 @@ body {
     background-color: #EFBC6F;
 }
 
-.left_declar_text{
+.left_declar_text {
     display: block;
     width: 45%;
     min-width: 200px;
     max-width: 740px;
 }
 
-.quote_img{
+.quote_img {
     width: 51px;
     height: 51px;
     margin-bottom: 42px;
 }
 
-.quote_img img{
+.quote_img img {
     width: 100%;
 }
 
-.left_declare_par{
+.left_declare_par {
     font-size: max(24px, 40px);
     font-weight: 700;
 }
 
-.declar_author{
+.declar_author {
     width: 100%;
     text-align: right;
     font-size: max(18px, 27px);
     margin-top: 70px;
 }
 
-.right_declar_text{
+.right_declar_text {
     display: block;
     width: 45%;
     min-width: 200px;
@@ -246,11 +246,11 @@ body {
     margin-top: 90px;
 }
 
-.top_par{
+.top_par {
     margin-bottom: 100px;
 }
 
-.declar_video_cont{
+.declar_video_cont {
     margin: -90px auto 0;
     min-width: 240px;
     min-height: 120px;
@@ -258,10 +258,123 @@ body {
     height: 38vw;
 }
 
-.declar_video{
+.declar_video {
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
 /********** End Declaration section page ***************/
+/********** Start Benefit section page ***************/
+
+.benefit_section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 900px;
+}
+
+.benefit_section div {
+    width: 100%;
+    min-width: 300px;
+}
+
+.benefit_gtext {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #C7B79D;
+    padding: 0 4.9vw;
+}
+
+.benefit_text_par {
+    font-size: 66px;
+    font-weight: 700;
+}
+
+.benefit_occur_cont {
+    display: grid;
+    justify-content: space-evenly;
+    padding: 50px 50px;
+}
+
+.benefit_text {
+    height: fit-content;
+    font-size: 26px;
+}
+
+.benefit_text::first-letter {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/********** End Benefit section page ***************/
+/********** Start Option section page ***************/
+
+.option_section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 900px;
+}
+
+.option_title_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF5C5C;
+    color: white;
+}
+
+.option_title_section,.option_type_section{
+    width: 58%;
+}
+
+.option_gtext,.option_ltext{
+    width: 70%;
+    max-width: 650px;
+    margin-bottom: 56px;
+}
+
+.option_gtext{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.option_type_section{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 50px;
+}
+
+.option_item{
+    display: grid;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.option_item_cert span{
+    font-weight: 400;
+}
+
+.option_info_btn{
+    font-size: 30px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #FF5C5C;
+    margin: 20px auto 0;
+}
+
+.option_legend{
+    width: 100%;
+    font-weight: 400%;
+    padding: 9px 0;
+    font-size: 14px;
+    text-align: center;
+    background-color: #d9d9d9;
+}
+
+/********** End Option section page ***************/
