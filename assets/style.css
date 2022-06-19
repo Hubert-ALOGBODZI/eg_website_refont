@@ -16,6 +16,7 @@ body {
     font-size: 16px;
 }
 
+
 /**************************************/
 
 /********** Menu for all pages ***************/
@@ -96,7 +97,7 @@ body {
         list-style: none;
         justify-content: space-around;
         padding: 20px;
-        background-color: #8080807c;
+        background-color: #fff;
         border-radius: 30px;
         backdrop-filter: blur(10px);
     }
@@ -216,6 +217,12 @@ body {
     max-width: 740px;
 }
 
+@media (max-width: 1024px) {
+    .left_declar_text {
+        width: 100%;
+    }
+}
+
 .quote_img {
     width: 51px;
     height: 51px;
@@ -229,6 +236,12 @@ body {
 .left_declare_par {
     font-size: max(24px, 40px);
     font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .left_declare_par {
+        font-size: 5.5vw;
+    }
 }
 
 .declar_author {
@@ -245,6 +258,12 @@ body {
     max-width: 740px;
     font-size: max(20px, 30px);
     margin-top: 90px;
+}
+
+@media (max-width: 1024px) {
+    .right_declar_text {
+        width: 100%;
+    }
 }
 
 .top_par {
@@ -275,9 +294,14 @@ body {
     height: 900px;
 }
 
+@media (max-width: 1024px) {
+    .benefit_section {
+        flex-wrap: wrap;
+    }
+}
+
 .benefit_section div {
     width: 100%;
-    min-width: 300px;
 }
 
 .benefit_gtext {
@@ -291,6 +315,14 @@ body {
 .benefit_text_par {
     font-size: 66px;
     font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .benefit_text_par {
+        text-align: center;
+        padding: 10 0px 0;
+        font-size: 7vw;
+    }
 }
 
 .benefit_occur_cont {
@@ -317,7 +349,14 @@ body {
     flex-wrap: nowrap;
     flex-direction: row-reverse;
     justify-content: center;
-    height: 900px;
+    height: fit-content;
+}
+
+@media (max-width: 1024px) {
+    .option_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .option_title_section {
@@ -339,9 +378,22 @@ body {
     margin-bottom: 56px;
 }
 
+@media (max-width: 1024px) {
+    .option_title_section,.option_type_section{
+        width: 100%;
+        padding-top: 50px;
+    }
+}
+
 .option_gtext{
     font-size: 40px;
     font-weight: 700;
+}
+
+@media (max-width: 1024px){
+    .option_gtext{
+
+    }
 }
 
 .option_type_section{
@@ -357,6 +409,12 @@ body {
     font-size: 28px;
 }
 
+@media (max-width: 1024px){
+    .option_item{
+        font-size: 1.5rem;
+    }
+}
+
 .option_item_cert span{
     font-weight: 400;
 }
@@ -367,6 +425,14 @@ body {
     color: white;
     background-color: #FF5C5C;
     margin: 20px auto 0;
+}
+
+@media (max-width: 1024px){
+    .option_info_btn{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 }
 
 .option_legend{
@@ -394,7 +460,32 @@ body {
     font-weight: bold;
     text-align: center;
     width: fit-content;
+    position: relative;
     margin: 0 auto 100px;
+}
+
+@media (max-width: 1024px){
+    .pratical_title{
+        width: 100vw;
+        font-size: 7vw;
+    }
+}
+
+.pratical_title::before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+}
+
+@media (max-width: 1024px){
+    .pratical_title::before{
+        display: none;
+    }
 }
 
 .pratical_explain {
@@ -404,10 +495,22 @@ body {
     width: 100%;
 }
 
+@media (max-width: 1024px){
+    .pratical_explain{
+        flex-wrap: wrap;
+    }
+}
+
 .pratical_explain_text{
     width: 30%;
-    min-width: 250px;
+    margin-top: 50px;
     text-align: center;
+}
+
+@media (max-width: 1024px){
+    .pratical_explain_text{
+        min-width: 240px;
+    }
 }
 
 .pratical_speaker_title{
@@ -415,6 +518,12 @@ body {
     text-align: center;
     width: fit-content;
     margin: 80px auto 80px;
+}
+
+@media (max-width: 1024px){
+    .pratical_speaker_title{
+        font-size: 8vw;
+    }
 }
 
 .speaker_el{
@@ -439,11 +548,12 @@ body {
 }
 
 .speaker_name{
-    display: none;
+    display: grid;
+    opacity: 0;
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 0%;
+    bottom: 0;
     left: 0;
     text-align: center;
     align-items: center;
@@ -452,7 +562,8 @@ body {
 }
 
 .speaker:is(:hover,:active,:focus) .speaker_name{
-    display: grid;
+    height: 100%;
+    opacity: 1;
     transition: .5s;
     cursor: pointer;
 }
