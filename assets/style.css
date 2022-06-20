@@ -6,6 +6,19 @@
     transform: .3s;
 }
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+:focus{
+    outline: none;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: red;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -392,7 +405,7 @@ body {
 
 @media (max-width: 1024px){
     .option_gtext{
-
+        font-size: 7vw;
     }
 }
 
@@ -453,6 +466,7 @@ body {
     color: white;
     padding: 50px 0;
     background-color: #0977A6;
+    overflow: hidden;
 }
 
 .pratical_title{
@@ -530,7 +544,8 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .speaker{
@@ -539,7 +554,6 @@ body {
     height: 180px;
     margin: 10px 50px;
     transition: .5s;
-    scroll-behavior: smooth;
 }
 
 .speaker_img{
@@ -569,3 +583,147 @@ body {
 }
 
 /********** End Pratical section page ***************/
+/********** Start Apply option section page ***************/
+
+.apply_procedure{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.apply_title_section{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.apply_imgback{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.apply_gtitle{
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    font-size: 46px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.apply_ltext{
+    position: relative;
+    width: 80%;
+    z-index: 2;
+    text-align: center;
+    margin: 10% auto 0;
+}
+
+.apply_proceed{
+    display: grid;
+    width: 50%;
+    align-items: stretch;
+    background-color: #FFA700;
+    font-size: 25px;
+    padding: 12vw 7vh;
+    gap: 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.apply_proceed_el::after{
+    width: 40%;
+    height: 4px;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    background-color: white;
+}
+
+.btext{
+    font-weight: bold;
+}
+
+.proceed_el_list{
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+/********** End Apply option section page ***************/
+/********** Start Apply form section page ***************/
+
+.apply_form_section{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    padding: 10vh 5vw 5vh;
+    width: 100%;
+    overflow-y: scroll;
+    background: url(business_img4.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.apply_form_title{
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0 auto 60px;
+}
+
+.applyform{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 87%;
+    grid-gap: 60px;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.applyform input:not(:last-child){
+    text-indent: 20px;
+    height: 60px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.applyform input::placeholder{
+    color: white;
+    font-size: 18px;
+}
+
+.grid_left{
+    grid-column: 1 / 2;
+}
+.grid_right{
+    grid-column: 2 / 3;
+}
+.grid_max{
+    grid-column: 1 / -1;
+}
+
+.send_btn{
+    font-size: 34px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px 30px;
+    width: 200px;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/********** End Apply form section page ***************/
