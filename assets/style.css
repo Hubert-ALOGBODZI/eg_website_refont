@@ -22,3 +22,12 @@
 .energyspace_text{
    display: flex;
 }
+.container .ourpeople_section .peoples_cont{
+    display: flex;
+    height: 100%;
+    width: 100vh;
+}
+
+.abouteg{
+    display: flex;
+}
