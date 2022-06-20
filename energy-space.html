@@ -1,25 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="font-style.css"> -->
     <title>Energy Generation - Home</title>
     <link rel="stylesheet" href="assets/style.css">
+
+
 </head>
+
 <body>
     <!-- Menu for all pages -->
+    <div class="menu_bottom">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="business-energy.html">Business & Energy School</a></li>
+        <li><a href="energy-space.html">Energy Space</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </div>
     <div class="menu_bar">
         <div class="logo">
-            <img src="assets/logo.png" alt="eg_logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="eg_logo" class="logo_img">
+            </a>
         </div>
         <div class="menu_items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="business-energy.html">Business & Energy School</a></li>
-            <li><a href="energy-space.html">Energy Space</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="business-energy.html">Business & Energy School</a></li>
+                <li><a href="energy-space.html">Energy Space</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </div>
+            <li class="lang">
+                <span>
+                    <a href="#">
+                        <img src="assets/FRA.png" alt="french img" class="langfr">
+                    </a>
+                </span>
+            </li>
+            <li class="lang">
+                <span>
+                    <a href="#">
+                        <img src="assets/GBR.png" alt="eng img" class="langen">
+                    </a>
+                </span>
+            </li>
         </div>
     </div>
     <!-- End Menu for all pages -->
+
+    <!-- beginning space box -->
+    <div class="space-image">
+        <img src="assets/space1.png" alt="">
+    </div>
+    <div class="greet-container">
+        <div id="icone">
+
+            <div class="text">ENERGY SPACE</div>
+            <div class="radius-box">
+                <img src="assets/arraw.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- *** slideshow   box. ici nous allons utiluser css et js pour faire defiler les images**** -->
+    <section class="portfolio-container">
+
+        <p id="startup">OUR  STARTUPS  PORTFOLIO</p>
+        <div class="slide-box">
+            <img src="assets/slide.png" alt="imag1" class="imag_slider active">
+            <img src="assets/slide1.png" alt="imag2"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag3"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag4"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag5"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag6"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag7"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag8"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag9"class="imag_slider">
+            <img src="assets/slide1.png" alt="imag10"class="imag_slider">
+            <div class="next">
+               
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="past">
+                <i class="fa-solid fa-chevron-left"></i>
+               
+            </div>
+           
+        </div>
+        
+        
+       
+    </section>
+
+<!-- slidehow js -->
+<script>
+    
+
+    // **** recuperation des images****
+    let imag_slider =document.getElementsByClassName('img_slider');
+
+    let etape = 0;
+
+let nbr_img_slider.length;
+let next = document.querySelector('.next');
+let past =  document.querySelector('.past');
+
+
+
+function enleverActiveImages(){
+    for(let i = 0; i <nbr_img; i++){
+    img_slider[i].classList.remove('active')
+    }
+}
+next.addEventlistener('click', function(){
+    etape++;
+    if(etape>=nbr_img){
+        etape = 0
+    }
+    enleverActiveImages();
+    imag_slider[etape].classList.add('active');
+})
+past.addEventListener('click',function(){
+    etape--;
+    if(etape< 0){
+        etape = nbr_img -1;   
+     }
+     enleverActiveImages();
+     img_slider[etape].classList.add('active')
+})
+
+
+
+</script>
+
+
 </body>
+
 </html>

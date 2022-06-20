@@ -1,6 +1,237 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: 0;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/**************************************/
+
+/********** Menu for all pages ***************/
+
+.menu_bar {
+    width: 100%;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffF0;
+    position: sticky;
+}
+
+.menu_items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    padding: 0 10px;
+}
+
+.lang {
+    margin-right: 10px;
+    display: flex;
+    height: 30px;
+}
+
+.lang span {
+    display: block;
+}
+
+.langfr,
+.langen {
+    width: 50px;
+    height: 30px;
+}
+
+.menu_bottom{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .logo_img{
+        width: 60%;
+        align-items: center;
+    }
+    .menu{
+        display: none;
+    }
+    .menu_bottom{
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 90%;
+        list-style: none;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: gray;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+    }
+}
+
+/********** End menu for all pages ***************/
+
+
+
+/****** Energie space style box beginning *****/
+
+.space-image{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 0;
+}
+.space-image img{
+    width: 100%;
+    height: 500px;
+}
+.greet-container{
+    width:100% ;
+    height:300px ;
+    background-color:aliceblue;
+   margin-top: 0;
+ 
+    
+}
+#icone{
+    max-width: 700px;
+    height: 200px;
+   
+    margin: auto;
+    margin-top :30px;
+    position: relative;
+}
+.text{
+width: 50%;
+height: 100px;
+left:20%;
+color: rgb(233, 24, 24);
+font-size:3em;
+font-weight: bold;
+position: absolute;
+top: 25%;
+z-index: 2;
+}
+.radius-box{
+ width: 150px;
+ height: 150px;
+background-color:rgb(0, 94, 255) ;
+position: absolute;
+border-radius: 50%;
+left: 60%;
+top: 15%;
+z-index: 1;
+border: 3px solid red;
+
+}
+.radius-box img{
+    width: 60%;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+/* slide  box  style */
+.portfolio-container{
+    height: 700px;
+    background-color: rgb(227, 207, 244);
+}
+#startup{
+    max-width: 500px; 
+    height: 100px;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(85, 21, 145);
+    
+
+}
+.slide-box{
+    max-width: 900px;
+    height: 600px;
+    margin: auto;
+    background-color: aliceblue;
+    position: relative;
+}
+.slide-box img{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    /* transform: translate(-50% 50%); */
+    opacity: 0;
+    transition: opacity .5s;
+
+
+
+}
+.slide-box img :active{
+    opacity: 1;
+}
+.next ,.past{
+    color: rgb(17, 5, 5);
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+   transform: translate(50%);
+   cursor: pointer;
+  
+}
+.next{
+    right: 1rem;
+}
+.past{
+    left: 1rem;
+}
+
+
+    
+
+
+
+
+
+@media(max-width:685px){
+    .text{
+        width: 300px;
+        height: 50px;
+        font-size: 2em;
+        top: 30%;
+    }
+    .radius-box{
+        width: 130px;
+        height: 130px;
+        left: 55%;
+    }
+}
+@media(max-width:925px){
+    .slide-box{
+        width: 500px;
+        height: 500px;
+        margin: auto;
+
+    }
+    .slide-box img{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
