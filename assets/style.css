@@ -4,3 +4,21 @@
     box-sizing: border-box;
     border: 0;
 }
+
+.formulaire_section{
+    display: flex;
+}
+
+.energyspace_section{
+    background-color: blue;
+    
+}
+
+.spacephoto{
+    height: 10px;
+    width: 10px;
+}
+
+.energyspace_text{
+   display: flex;
+}
