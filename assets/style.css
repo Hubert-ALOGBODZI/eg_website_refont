@@ -1735,4 +1735,211 @@ body {
     }
 }
 
+
+/********** End menu for all pages ***************/
+
+
+
+/****** Energie space style box beginning *****/
+
+.space-image{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 0;
+}
+.space-image img{
+    width: 100%;
+    height: 500px;
+}
+.greet-container{
+    width:100% ;
+    height:300px ;
+    background-color:aliceblue;
+    padding: 8px;
+ 
+    
+}
+#icone{
+    max-width: 700px;
+    height: 200px;
+   
+    margin: auto;
+    margin-top :20px;
+    position: relative;
+}
+.text{
+width: 50%;
+height: 100px;
+left:20%;
+color: rgb(233, 24, 24);
+font-size:3em;
+font-weight: bold;
+position: absolute;
+top: 25%;
+z-index: 2;
+}
+.radius-box{
+ width: 150px;
+ height: 150px;
+background-color:rgb(0, 94, 255) ;
+position: absolute;
+border-radius: 50%;
+left: 60%;
+top: 15%;
+z-index: 1;
+border: 3px solid red;
+
+}
+.radius-box img{
+    width: 60%;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+/* slide  box  style */
+.portfolio-container{
+    height: 800px;
+    background-color: rgb(227, 207, 244);
+}
+#startup{
+    max-width: 500px; 
+    height: 100px;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(85, 21, 145);
+}
+.slide-box{
+    max-width: 900px;
+    height: 600px;
+    margin: auto;
+    background-color: aliceblue;
+    position: relative;
+}
+.slide-box img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    /* transform: translate(-50% 50%); */
+    top: 0;
+    left: 0;
+    opacity:0;
+    transition: opacity .5s;
+
+
+
+}
+.slide-box .active{
+    opacity: 1;
+}
+.next ,.past{
+    color: rgb(17, 5, 5);
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+   transform: translate(50%);
+   cursor: pointer;
+  
+}
+.past :hover{
+    background-color: red;
+    color: white;
+}
+.next :hover{
+    background-color: red;
+    color: white;
+}
+
+.next{
+    right: -2rem;
+}
+.past{
+   left: -3rem;
+}
+
+
+@media(max-width:925px){
+    .slide-box{
+        width: 500px;
+        height: 500px;
+        margin: auto;
+
+    }
+    .slide-box img{
+        width: 500px;
+        height: 500px;
+    }
+    .menu_bottom{
+        bottom: -800px;
+    }
+}
+
+
+@media(max-width:685px){
+    .space-image{
+        width: 100vw;
+        height: 300px;
+    }
+    .space-image img{
+        width: 100vw;
+        height: 100%;
+    }
+    .greet-container{
+        width:100% ;
+        height:150px ;
+        background-color:aliceblue;
+       margin: auto;
+    }
+    .text{
+        width: 300px;
+        height: 50px;
+        font-size: 2em;
+        top: 30%;
+        left:20%;
+    }
+    .radius-box{
+        width: 110px;
+        height: 110px;
+        left: 50%;
+        top: 5%;
+        border: 2px solid yellow;
+    }
+    .portfolio-container{
+        height: 530px
+    }
+    #startup{
+        width: 300px;
+        height: 70px;
+        font-size: 2em;
+    }
+    .slide-box{
+        width: 100%;
+        height: 400px;
+        margin: auto;
+        padding: 3vh;
+
+    }
+    .slide-box img{
+        width: 80%;
+        height: 400px;
+        left: 40px;
+        padding-top: 3vh;
+    }
+    .past{
+        top: 100%;
+        left: 30%;
+        color: white;
+    }
+    .next{
+        top: 100%;
+        right: 30%;
+        color: white;
+    }
+    .menu_bottom{
+        bottom: -350px;
+    }
+
+
+}
+
 /********** End Footer form section page ***************/
