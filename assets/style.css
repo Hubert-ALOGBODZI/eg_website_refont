@@ -3,8 +3,164 @@
     padding: 0;
     box-sizing: border-box;
     border: 0;
-
 }
+
+html{
+    scrollbar-color: crimson #ffffff00;
+    scrollbar-width: 6px;
+}
+
+:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: red;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    scrollbar-color: #121212 crimson;
+    scrollbar-width: thin;
+}
+
+
+/**************************************/
+
+/********** Menu for all pages ***************/
+
+.menu_bar {
+    width: 100%;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffB0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.menu_bar_fixed {
+    position: fixed;
+}
+
+.menu_items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    padding: 0 10px;
+}
+
+.lang {
+    margin-right: 10px;
+    display: flex;
+    height: 30px;
+}
+
+.lang span {
+    display: block;
+}
+
+.langfr,
+.langen {
+    width: 50px;
+    height: 30px;
+}
+
+.menu_bar_bottom,
+.icon_ng {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .logo_img {
+        width: 60%;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .langfr,
+    .langen {
+        width: 30px;
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    .menu_bar_bottom {
+        z-index: 99;
+        display: flex;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 90%;
+        list-style: none;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #121212e9;
+        border-radius: 17px;
+        backdrop-filter: blur(10px);
+    }
+
+    .menu_bar_bottom li a {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .icon_ng {
+        height: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .icon_ng {
+        display: block;
+    }
+
+    .menu_bar_bottom li a span {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu_bar_bottom {
+        width: 100vw;
+        bottom: 0px;
+        left: 0;
+        margin: 0 auto;
+        transform: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .icon_ng {
+        height: 37px;
+    }
+}
+
+/********** End menu for all pages ***************/
+
 
 
 /* 
@@ -425,161 +581,6 @@
 
 /********************* End Home Page **************************/
 
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-:focus {
-    outline: none;
-}
-
-::-webkit-scrollbar-thumb {
-    width: 5px;
-    background-color: red;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-}
-
-
-/**************************************/
-
-/********** Menu for all pages ***************/
-
-.menu_bar {
-    width: 100%;
-    padding: 2% 3%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffffB0;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-
-.menu_bar_fixed {
-    position: fixed;
-}
-
-.menu_items {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    color: black;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-}
-
-.menu li {
-    padding: 0 10px;
-}
-
-.lang {
-    margin-right: 10px;
-    display: flex;
-    height: 30px;
-}
-
-.lang span {
-    display: block;
-}
-
-.langfr,
-.langen {
-    width: 50px;
-    height: 30px;
-}
-
-.menu_bottom,
-.icon_ng {
-    display: none;
-}
-
-@media (max-width: 950px) {
-    .logo_img {
-        width: 60%;
-        align-items: center;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .langfr,
-    .langen {
-        width: 30px;
-        height: 20px;
-        margin-top: 5px;
-    }
-
-    .menu_bottom {
-        z-index: 99;
-        display: flex;
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 90%;
-        list-style: none;
-        justify-content: space-around;
-        padding: 20px;
-        background-color: #121212e9;
-        border-radius: 17px;
-        backdrop-filter: blur(10px);
-    }
-
-    .menu_bottom li a {
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .icon_ng {
-        height: 40px;
-    }
-}
-
-@media (max-width: 700px) {
-    .icon_ng {
-        display: block;
-    }
-
-    .menu_bottom li a span {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .menu_bottom {
-        width: 100vw;
-        bottom: 0px;
-        left: 0;
-        margin: 0 auto;
-        transform: none;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .icon_ng {
-        height: 37px;
-    }
-}
-
-/********** End menu for all pages ***************/
-
-
 /********** Start Energy Home page ***************/
 
 .bus_home {
@@ -915,7 +916,7 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
 
     .option_gtext,
     .option_ltext {
@@ -930,7 +931,7 @@ body {
 
 @media (max-width: 1080px) {
     .option_gtext {
-        font-size: 7vw;
+        font-size: 5.5vw;
     }
 }
 
@@ -939,6 +940,13 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 50px 50px;
+}
+
+
+@media (max-width: 1080px) {
+    .option_type_section {
+        padding: 30px 4vw;
+    }
 }
 
 .option_item {
@@ -1006,7 +1014,8 @@ body {
 @media (max-width: 1080px) {
     .pratical_title {
         width: 100vw;
-        font-size: 7vw;
+        font-size: 9vw;
+        margin-bottom: 20px;
     }
 }
 
@@ -1065,7 +1074,7 @@ body {
 
 @media (max-width: 1080px) {
     .pratical_speaker_title {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 }
 
@@ -1075,6 +1084,8 @@ body {
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
 }
 
 .speaker_el::-webkit-scrollbar-thumb {
@@ -1350,10 +1361,8 @@ body {
 .believer_el {
     display: flex;
     justify-content: center;
-    padding: 0 5vw;
     margin-bottom: 30px;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+    flex-wrap: wrap;
     gap: 26px;
 
 }
@@ -1385,7 +1394,7 @@ body {
 .footer {
     display: flex;
     height: fit-content;
-    width: 100%;
+    width: 94%;
     padding: 3vh 7vw 7vh;
     position: relative;
     justify-content: space-between;
@@ -1393,7 +1402,6 @@ body {
 
 @media (max-width: 1080px) {
     .footer {
-        row-gap: 5vh;
         flex-wrap: wrap;
         align-items: center;
     }
@@ -1472,6 +1480,7 @@ body {
 
 @media (max-width: 1080px) {
     .social_links_section {
+        order: 1;
         justify-content: center;
         width: 100%;
     }
@@ -1506,16 +1515,15 @@ body {
 
 .all_links {
     display: block;
-    width: 400px;
+    width: 20%;
 }
 
 @media (max-width: 1080px) {
     .all_links {
         display: grid;
         width: 90%;
-        justify-self: right;
         justify-content: center;
-        margin-bottom: 90px;
+        margin: 50px auto 90px;
     }
 }
 
@@ -1589,21 +1597,6 @@ body {
         font-size: 5vw;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*====================BLOG PAGE CSS=================================*/
 
@@ -1938,8 +1931,6 @@ border: 3px solid red;
     .menu_bottom{
         bottom: -350px;
     }
-
-
 }
 
 /********** End Footer form section page ***************/
