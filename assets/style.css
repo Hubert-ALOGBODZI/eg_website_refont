@@ -1166,4 +1166,131 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================BLOG PAGE CSS=================================*/
+
+
+
+/*--======================================header for blog page===================================*/
+.container{
+    width: 100%;
+ }
+.container header{
+   display: flex;
+   align-items: center;
+   word-spacing: 5px;
+   height: 100px;
+   width: 100%;
+}
+.container header .right{
+   padding-left: 10%;
+}
+.container header .right button{
+    height:35px ;
+    width: 130px;
+    color: #3562FF;
+    background: #FFFFFF;
+    border: 1px solid #1E4FFF;
+ }
+ .container header .left{
+    width: 72%;
+ }
+ .container header .left a{
+    padding-left: 2%;
+ }
+ /* <!--======================================Articles for blog page===================================--> */
+.container .articles{
+  display: flex;
+  border:1px solid black;
+  gap: 2%;
+  width: 100%;
+}
+.container .articles .left img{
+    width:90%;
+    height:450px;
+    object-fit: cover;
+}
+
+.container .articles .right .head .logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.container .articles .right .head{
+   padding-top: 2%;
+}
+.container .articles .right .desc_logo{
+    width: 50%;
+    height: 50%;
+    margin-top: -13%;
+    margin-left: 19%;
+}
+.container .articles .right .head .desc_logo span{
+    margin-right: 10%;
+}
+.container .articles .right .head .desc_logo{
+    width: 100%;
+}
+.container .articles .right .desc_logo span:nth-child(1){
+    font-weight: bold;
+}
+
+.container .articles .right .description h1{
+    font-size: 25px;
+} 
+.container .articles .right .description{
+    padding-top: 3%;
+} 
+.container .articles .foot{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+} 
+.container .articles .foot .left_foot{
+    width: 80%;
+    display: flex;   
+    gap: 8%;
+} 
+.container .articles .foot .right_foot{
+    display: flex;  
+    gap: 5%; 
+} 
+
+
+
+
+@media (max-width: 1000px) {
+    .container .articles{
+       flex-wrap: wrap;
+       justify-content: center;
+      }
+      .container .articles .left img{
+        width:100%;
+        height:220px;
+        object-fit: cover;
+    }
+    .container header .left{
+        display: none;
+     }
+     .container header .right{
+        padding-left: 30%;
+     }
+}
+
 /********** End Footer form section page ***************/
+
