@@ -1,6 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: 0;
+}
+
+.formulaire_section{
+    display: flex;
+}
+
+.energyspace_section{
+    background-color: blue;
+    
+}
+
+.spacephoto{
+    height: 10px;
+    width: 10px;
+}
+
+.energyspace_text{
+   display: flex;
+}
+.container .ourpeople_section .peoples_cont{
+    display: flex;
+    height: 100%;
+    width: 100vh;
+}
+
+.abouteg{
+    display: flex;
 }
