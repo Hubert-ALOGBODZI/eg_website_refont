@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Energy Generation - Home</title>
     <link rel="stylesheet" href="assets/style.css">
+
+
 </head>
 
 <body>
@@ -48,6 +51,121 @@
         </div>
     </div>
     <!-- End Menu for all pages -->
+
+    <!-- beginning space box -->
+    <div class="space-image">
+        <img src="assets/space1.png" alt="">
+    </div>
+    <div class="greet-container">
+        <div id="icone">
+
+            <div class="text">ENERGY SPACE</div>
+            <div class="radius-box">
+                <img src="assets/arraw.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- *** slideshow   box. ici nous allons utiluser css et js pour faire defiler les images**** -->
+    <section class="portfolio-container">
+
+        <p id="startup">OUR  STARTUPS  PORTFOLIO</p>
+        <div class="slide-box">
+            <img src="assets/slide.png" alt="imag1" class="imag_slider active">
+            <img src="assets/slide1.png" alt="imag2"class="img_slider">
+            <img src="assets/slide2.png" alt="imag3"class="img_slider">
+            <img src="assets/slide3.png" alt="imag4"class="img_slider">
+            <img src="assets/slide4.png" alt="imag5"class="img_slider">
+            <img src="assets/slide5.png" alt="imag6"class="img_slider">
+            <img src="assets/slide6.png" alt="imag7"class="img_slider">
+            <img src="assets/slide7.png" alt="imag8"class="img_slider">
+            <img src="assets/slide8.png" alt="imag9"class="img_slider">
+            <img src="assets/slide9.png" alt="imag10"class="img_slider">
+
+            <img src="assets/slide10.png" alt="imag11"class="img_slider">
+            <img src="assets/slide11.png" alt="imag12"class="img_slider">
+            <img src="assets/slide12.png" alt="imag13"class="img_slider">
+            <img src="assets/slide13.png" alt="imag14"class="img_slider">
+            <img src="assets/slide14.png" alt="imag15"class="img_slider">
+            <img src="assets/slide15.png" alt="imag16"class="img_slider">
+            <img src="assets/slide16.png" alt="imag17"class="img_slider">
+            <img src="assets/slide17.png" alt="imag18"class="img_slider">
+            <img src="assets/slide18.png" alt="imag19"class="img_slider">
+
+            <div class="next">
+               
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="past">
+                <i class="fa-solid fa-chevron-left"></i>
+               
+            </div>
+           
+        </div>
+        
+        
+       
+    </section>
+
+<!-- slidehow js -->
+<script>
+    
+
+    // **** recuperation des images****
+    let img_slider = document.getElementsByClassName('img_slider');
+    
+    let etape = 0;
+
+    // ici se trouve le nombre d'image
+let nbr_img = img_slider.length;  
+
+//  recupertion des action faitent par les boutons next et past
+let past = document.querySelector('.past');
+let next =  document.querySelector('.next');
+
+
+// on va créer une fonction enlever image active ,qui va permetre d'enlever la classe active sur toule les image
+function enleverActiveImages(){
+    for(let i = 0; i < nbr_img; i++){
+    img_slider[i].classList.remove('active');
+    }
+}
+ next.addEventListener('click',function(){
+    etape ++;
+    if(etape >= nbr_img){
+        etape = 0;
+    }
+    enleverActiveImages();
+    img_slider[etape].classList.add('active');
+})
+past.addEventListener('click',function(){
+    etape--;
+    if(etape< 0){
+        etape = nbr_img -1;   
+     }
+     enleverActiveImages();
+     img_slider[etape].classList.add('active');
+})
+
+// on va utiliser la function setInterval pour faire defiler les image automatquement 
+setInterval(function() {
+    etape ++;
+    if(etape >= nbr_img){
+        etape = 0;
+    }
+    enleverActiveImages();
+    img_slider[etape].classList.add('active');
+},3000)
+
+
+
+
+
+</script>
+
+
 </body>
+
 
 </html>
