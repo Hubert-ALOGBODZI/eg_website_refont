@@ -440,6 +440,12 @@ body {
     margin-bottom: 50px;
 }
 
+@media (max-width: 912px){
+    .business_title{
+        font-size: 7vw;
+    }
+}
+
 .spacelogo {
     position: absolute;
     right: 0;
@@ -472,6 +478,13 @@ body {
 @media (max-width: 912px){
     .business_text{
         padding-left: 6vw;
+    }
+}
+@media (max-width: 512px){
+    .business_text{
+        padding: 1vw;
+        min-width: unset;
+        width: 100%;
     }
 }
 
@@ -521,6 +534,12 @@ body {
     margin-bottom: 50px;
 }
 
+@media (max-width: 912px){
+    .solar_title{
+        font-size: 7vw;
+    }
+}
+
 .solar_text {
     display: flex;
     gap: 30px;
@@ -544,7 +563,8 @@ body {
 
 @media (max-width: 912px){
     .solar_textpar{
-        width: 70%;
+        width: 100%;
+        padding-left: 9vw;
         row-gap: 3vh;
     }
 }
@@ -561,6 +581,12 @@ body {
 
 .solar_textpar p:first-child {
     width: 150%;
+}
+
+@media (max-width: 912px){
+    .solar_textpar p:first-child {
+        width: 100%;
+    }
 }
 
 .solarphoto {
@@ -612,9 +638,21 @@ body {
     width: fit-content;
 }
 
+@media (max-width: 912px){
+    .energyspace_title{
+        font-size: 7vw;
+    }
+}
+
 .energyspace_title :nth-child(2){
     font-size: 24px;
     text-align: right;
+}
+
+@media (max-width: 912px){
+    .energyspace_title :nth-child(2){
+        font-size: 3vw;
+    }
 }
 
 .energyspace_text{
@@ -1493,6 +1531,12 @@ body {
     }
 }
 
+@media (max-width: 800px) {
+    .footer{
+        padding: 2vh 2vw;
+    }
+}
+
 .newsletter {
     max-width: 400px;
 }
@@ -1589,6 +1633,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
+    margin-bottom: 40px;
 }
 
 .socials_link a {
@@ -1683,6 +1728,8 @@ body {
         font-size: 5vw;
     }
 }
+
+/* End Business Page */
 
 /*====================BLOG PAGE CSS=================================*/
 
