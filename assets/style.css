@@ -170,10 +170,10 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
-}
-
-.homepage_banner>img {
-    width: 100%;
+    background: url("accueil_background.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .home_textcontainer {
@@ -184,6 +184,15 @@ body {
     display: flex;
     column-gap: 40px;
     width: 50%;
+}
+
+@media (max-width: 912px) {
+    .home_textcontainer{
+        flex-wrap: wrap;
+        row-gap: 30px;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .home_logo {
@@ -202,6 +211,13 @@ body {
     -webkit-text-stroke: 2px white;
 }
 
+@media (max-width: 912px){
+    .img_text{
+        font-size: 5vw;
+        width: 100vw;
+    }
+}
+
 /* End Home Banner */
 /* Start about first section */
 
@@ -217,6 +233,13 @@ body {
     margin-bottom: 40px;
 }
 
+@media (max-width: 912px){
+    .about_title{
+        font-size: 7vw;
+        text-align: center;
+    }
+}
+
 .about_title>span {
     color: #bababa;
 }
@@ -226,6 +249,13 @@ body {
     flex-wrap: wrap;
     gap: 3vw;
     justify-content: left;
+}
+
+@media (max-width: 912px){
+    .about_text_container{
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 .about_text {
@@ -249,10 +279,19 @@ body {
     padding: 3vh 3vw;
 }
 
+@media (max-width: 912px){
+    .missionvision{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 4vh;
+    }
+}
+
 .mission_text {
     background-color: #F6F6F6;
     padding: 10px;
     width: 45%;
+    min-width: 300px;
 }
 
 .mission_title {
@@ -279,6 +318,14 @@ body {
 
 .visionphoto {
     width: 20%;
+    min-width: 200px;
+}
+
+@media (max-width: 912px){
+    .visionphoto{
+        order: 1;
+        width: 50%;
+    }
 }
 
 .visionphoto>img {
@@ -287,6 +334,7 @@ body {
 
 .impacts {
     width: 30%;
+    min-width: 300px;
     background-color: #F6F6F6;
     padding: 10px;
 }
@@ -405,17 +453,37 @@ body {
     gap: 30px;
 }
 
+@media (max-width: 912px){
+    .business_cont{
+        flex-wrap: wrap;
+    }
+}
+
 .business_text {
     font-size: 20px;
     width: 45%;
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
+@media (max-width: 912px){
+    .business_text{
+        padding-left: 6vw;
+    }
+}
+
 .businessphoto {
     width: 50%;
+}
+
+@media (max-width: 912px){
+    .businessphoto{
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
 .businessphoto img {
@@ -433,7 +501,7 @@ body {
     background: #FF3D00;
     color: white;
     font-size: 24px;
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
 
 /* End Our Business Section */
@@ -458,6 +526,12 @@ body {
     gap: 30px;
 }
 
+@media (max-width: 912px){
+    .solar_text{
+        flex-wrap: wrap;
+    }
+}
+
 .solar_textpar {
     position: relative;
     font-size: 20px;
@@ -466,6 +540,13 @@ body {
     display: grid;
     align-items: center;
     justify-content: space-around;
+}
+
+@media (max-width: 912px){
+    .solar_textpar{
+        width: 70%;
+        row-gap: 3vh;
+    }
 }
 
 .solar_textpar::before{
@@ -488,6 +569,13 @@ body {
     width: 60%;
 }
 
+@media (max-width: 912px){
+    .solarphoto{
+        position: static;
+        width: 100%;
+    }
+}
+
 .solarphoto img {
     width: 100%;
 }
@@ -498,6 +586,12 @@ body {
 
 .btn_solar button{
     margin: 0;
+}
+
+@media (max-width: 912px){
+    .btn_solar{
+        margin: 30px auto 0;
+    }
 }
 
 /* end Solar section */
@@ -528,8 +622,22 @@ body {
     gap: 5vw;
 }
 
+@media (max-width: 912px){
+    .energyspace_text{
+        flex-wrap: wrap;
+    }
+}
+
 .working_img{
     width: 56%;
+    min-width: 300px;
+}
+
+@media (max-width: 912px){
+    .working_img{
+        width: 100%;
+        order: 1;
+    }
 }
 
 .working_img img {
@@ -544,6 +652,13 @@ body {
     align-items: center;
     align-content: space-between;
     justify-content: space-around;
+}
+
+@media (max-width: 912px){
+    .spacetext{
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 /* End Energy Sapce  */
