@@ -52,10 +52,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffffB0;
+    background-color: #ffffff30;
     position: sticky;
+    font-weight: bold;
     top: 0;
     z-index: 99;
+    transition: .5s;
+}
+
+.nav_bar_white{
+    background-color: #fff;
 }
 
 .menu_bar_fixed {
