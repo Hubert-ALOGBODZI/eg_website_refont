@@ -33,7 +33,17 @@ body {
 
 
 /**************************************/
+/* Google translate */
 
+.google_trans{
+    position: fixed;
+    top: 10vh;
+    z-index: 100;
+    padding: 10px 20px;
+    background-color: #121212;
+}
+
+/* Google translate */
 /********** Menu for all pages ***************/
 
 .menu_bar {
