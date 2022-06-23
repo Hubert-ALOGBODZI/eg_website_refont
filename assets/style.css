@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     border: 0;
-    transform: .3s;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
+html{
+    scrollbar-color: crimson #ffffff00;
+    scrollbar-width: 6px;
 }
 
 :focus {
@@ -27,6 +27,8 @@ a {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    scrollbar-color: #121212 crimson;
+    scrollbar-width: thin;
 }
 
 
@@ -40,10 +42,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffffB0;
+    background-color: #ffffff30;
     position: sticky;
+    font-weight: bold;
     top: 0;
     z-index: 99;
+    transition: .5s;
+}
+
+.nav_bar_white{
+    background-color: #fff;
+}
+
+.menu_bar_fixed {
+    position: fixed;
 }
 
 .menu_items {
@@ -78,7 +90,7 @@ body {
     height: 30px;
 }
 
-.menu_bottom,
+.menu_bar_bottom,
 .icon_ng {
     display: none;
 }
@@ -100,7 +112,7 @@ body {
         margin-top: 5px;
     }
 
-    .menu_bottom {
+    .menu_bar_bottom {
         z-index: 99;
         display: flex;
         position: fixed;
@@ -116,7 +128,7 @@ body {
         backdrop-filter: blur(10px);
     }
 
-    .menu_bottom li a {
+    .menu_bar_bottom li a {
         color: white;
         font-weight: bold;
         font-size: 18px;
@@ -132,13 +144,13 @@ body {
         display: block;
     }
 
-    .menu_bottom li a span {
+    .menu_bar_bottom li a span {
         display: none;
     }
 }
 
 @media (max-width: 500px) {
-    .menu_bottom {
+    .menu_bar_bottom {
         width: 100vw;
         bottom: 0px;
         left: 0;
@@ -155,6 +167,425 @@ body {
 
 /********** End menu for all pages ***************/
 
+
+
+/* 
+.section0{
+    background-image: url(accueil_background.png);
+    height: 100vh;
+    width: 100vw;
+        }
+
+        .spacephoto{
+            height: 10px;
+            width: 10px;
+        }
+
+        .energyspace_text{
+        display: flex;
+        }
+        .container .ourpeople_section .peoples_cont{
+            display: flex;
+            height: 100%;
+            width: 100vh;
+        }
+
+        .abouteg{
+            display: flex;
+        }
+
+        .missionvision{
+            display: flex;
+        }
+
+        .section1{
+            height: 500px;
+            width: 1000px;
+            background-color: blueviolet;
+        }
+
+        .developpement{
+            display: flex;
+            margin-top: 80px;
+        }
+
+        .section2{
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(238, 238, 246);
+            display: flex;
+        gap: 100px; 
+        }
+
+        .impacts{
+            background-color: rgb(210, 210, 206);
+            height: 200px;
+        }
+
+        .titre2{
+            background-color: rgb(189, 196, 196);
+            height: 200px;
+        }
+
+        .visionphoto img{
+            width: 200px;
+            height: 200px;
+        }
+
+        .section4{
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(73, 206, 233);
+            
+        }
+
+        .business_text{
+            display: flex;
+            gap: 90px;
+            margin-top: 40px;
+            color: aliceblue;
+            height: 300px;
+            width: 900px;
+        }
+
+        .business_text img{
+            width: 400px;
+            height: 270px;
+        }
+
+        .section5{
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(197, 155, 41);
+        }
+
+        .solarphoto img{
+            width: 200px;
+            height: 200px;
+            margin-top: 80px;
+        }
+
+        .solar_text{
+            display: flex;
+            margin-top: 90px;
+        }
+
+        .section6{
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(32, 10, 226);
+            color: azure;
+        }
+
+        .titrelogo{
+            display: flex;
+        }
+
+        .energyspace_text img{
+            width: 200px;
+            height: 200px;
+        }
+
+        .energyspace_text{
+            display: flex;
+            gap: 50px;
+        }
+
+        .believer img{
+            width: 100px;
+            height: 50px;
+        }
+
+        .believer{
+            display: flex;
+            gap: 50px;
+        }
+
+        button{
+            background-color: rgb(205, 7, 7);
+            color: rgb(213, 187, 187);
+            width: 200px;
+            height: 50px;
+        } */
+/*********************  Home Page **************************/
+
+/* Home Banner */
+
+.homepage_banner {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.homepage_banner>img {
+    width: 100%;
+}
+
+.home_textcontainer {
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translatex(-50%);
+    display: flex;
+    column-gap: 40px;
+    width: 50%;
+}
+
+.home_logo {
+    background-color: white;
+    padding: 23px 35px;
+}
+
+.img_text {
+    display: grid;
+    align-items: center;
+    width: 1100px;
+    font-size: 2.2vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+/* End Home Banner */
+/* Start about first section */
+
+.about_section {
+    width: 100%;
+    padding: 80px 4vw 60px;
+}
+
+.about_title {
+    font-size: 58px;
+    font-weight: 700;
+    color: #EDB248;
+    margin-bottom: 40px;
+}
+
+.about_title>span {
+    color: #bababa;
+}
+
+.about_text_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: left;
+}
+
+.about_text {
+    font-size: 20px;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+.blue {
+    color: #3AA0FF;
+}
+
+/* End about first section */
+
+/* Mission Section */
+
+.missionvision {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 3vh 3vw;
+}
+
+.mission_text {
+    background-color: #F6F6F6;
+    padding: 10px;
+    width: 45%;
+}
+
+.mission_title {
+    font-size: 38px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.mission_text>p {
+    padding-left: 15px;
+    font-size: 18px;
+    position: relative;
+}
+
+.mission_text>p::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #5C5858;
+}
+
+.visionphoto {
+    width: 20%;
+}
+
+.visionphoto>img {
+    width: 100%;
+}
+
+.impacts {
+    width: 30%;
+    background-color: #F6F6F6;
+    padding: 10px;
+}
+
+.impacttitre {
+    font-size: 38px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.impacts>ul {
+    margin-left: 30px;
+}
+
+.impacts>ul>li {
+    margin-top: 15px;
+    font-size: 27px;
+}
+
+/* End Mission Section */
+/* Our people section */
+
+.ourpeople_section {
+    display: grid;
+    width: 100%;
+    margin-top: 60px;
+    padding: 30px 3vw;
+    position: relative;
+}
+
+.ourpeople_section::before {
+    content: "";
+    position: absolute;
+    width: 30vw;
+    height: 5px;
+    left: 4vw;
+    top: 0;
+    background-color: #D9D9D9;
+}
+
+.ourpeople_section::after {
+    content: "";
+    position: absolute;
+    width: 30vw;
+    height: 5px;
+    right: 4vw;
+    top: 0;
+    background-color: #D9D9D9;
+}
+
+.our_people_title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 38px;
+    color: #FF0000;
+    text-align: center;
+}
+
+.peoples_cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+
+.people_person {
+    max-width: 200px;
+    margin: 60px 60px;
+    text-align: center;
+}
+
+.people_person img {
+    width: 100%;
+}
+
+.people_name {
+    font-weight: 700;
+    font-size: 24px;
+    color: #232D84;
+}
+
+.people_profesion {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+/* End Our people section */
+/* Our Business Section */
+
+.ourbusiness {
+    position: relative;
+    padding: 100px 4vw;
+    width: 100%;
+    background: #009FE3;
+    color: #fff;
+}
+
+.business_title {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+
+.spacelogo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
+    min-width: 100px;
+}
+
+.business_cont{
+    display: flex;
+    gap: 30px;
+}
+
+.business_text{
+    font-size: 20px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.businessphoto{
+    width: 50%;
+}
+
+.businessphoto img{
+    width: 100%;
+}
+
+.button{
+    width: 100%;
+    margin-top: 40px;
+    display: grid;
+}
+
+.button button{
+    padding: 20px 30px;
+    background: #FF3D00;
+    color: white;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+/* End Our Business Section */
+
+
+/********************* End Home Page **************************/
 
 /********** Start Energy Home page ***************/
 
@@ -366,8 +797,8 @@ body {
     height: 38vw;
 }
 
-@media (max-width: 500px){
-    .declar_video_cont{
+@media (max-width: 500px) {
+    .declar_video_cont {
         width: 100vw;
         height: 60vw;
     }
@@ -379,8 +810,8 @@ body {
     border-radius: 20px;
 }
 
-@media (max-width: 500px){
-    .declar_video{
+@media (max-width: 500px) {
+    .declar_video {
         border-radius: 0;
     }
 }
@@ -491,7 +922,7 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
 
     .option_gtext,
     .option_ltext {
@@ -506,7 +937,7 @@ body {
 
 @media (max-width: 1080px) {
     .option_gtext {
-        font-size: 7vw;
+        font-size: 5.5vw;
     }
 }
 
@@ -515,6 +946,13 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 50px 50px;
+}
+
+
+@media (max-width: 1080px) {
+    .option_type_section {
+        padding: 30px 4vw;
+    }
 }
 
 .option_item {
@@ -582,7 +1020,8 @@ body {
 @media (max-width: 1080px) {
     .pratical_title {
         width: 100vw;
-        font-size: 7vw;
+        font-size: 9vw;
+        margin-bottom: 20px;
     }
 }
 
@@ -641,7 +1080,7 @@ body {
 
 @media (max-width: 1080px) {
     .pratical_speaker_title {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 }
 
@@ -651,6 +1090,8 @@ body {
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
 }
 
 .speaker_el::-webkit-scrollbar-thumb {
@@ -817,8 +1258,8 @@ body {
     margin: 0 auto 60px;
 }
 
-@media (max-width: 600px){
-    .apply_form_title{
+@media (max-width: 600px) {
+    .apply_form_title {
         font-size: 9vw;
     }
 }
@@ -926,16 +1367,14 @@ body {
 .believer_el {
     display: flex;
     justify-content: center;
-    padding: 0 5vw;
     margin-bottom: 30px;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+    flex-wrap: wrap;
     gap: 26px;
 
 }
 
-@media (max-width: 500px){
-    .believer_el{
+@media (max-width: 500px) {
+    .believer_el {
         flex-wrap: wrap;
         overflow: hidden;
     }
@@ -946,10 +1385,10 @@ body {
     width: fit-content;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
     .believer_el [class^="img"] {
         height: 100px;
-        width: 100% ;
+        width: 100%;
         width: fit-content;
     }
 }
@@ -961,7 +1400,7 @@ body {
 .footer {
     display: flex;
     height: fit-content;
-    width: 100%;
+    width: 94%;
     padding: 3vh 7vw 7vh;
     position: relative;
     justify-content: space-between;
@@ -969,7 +1408,6 @@ body {
 
 @media (max-width: 1080px) {
     .footer {
-        row-gap: 5vh;
         flex-wrap: wrap;
         align-items: center;
     }
@@ -1046,15 +1484,16 @@ body {
     align-content: center;
 }
 
-@media (max-width: 1080px){
-    .social_links_section{
+@media (max-width: 1080px) {
+    .social_links_section {
+        order: 1;
         justify-content: center;
         width: 100%;
     }
 }
 
 @media (max-width: 580px) {
-    .social_links_section{
+    .social_links_section {
         order: 1;
         justify-self: right;
         justify-content: center;
@@ -1082,16 +1521,15 @@ body {
 
 .all_links {
     display: block;
-    width: 400px;
+    width: 20%;
 }
 
 @media (max-width: 1080px) {
     .all_links {
         display: grid;
         width: 90%;
-        justify-self: right;
         justify-content: center;
-        margin-bottom: 90px;
+        margin: 50px auto 90px;
     }
 }
 
@@ -1106,8 +1544,8 @@ body {
     }
 }
 
-@media (max-width: 580px){
-    .all_link_title{
+@media (max-width: 580px) {
+    .all_link_title {
         text-align: center;
     }
 }
@@ -1130,8 +1568,8 @@ body {
     }
 }
 
-@media (max-width: 600px){
-    .site_links{
+@media (max-width: 600px) {
+    .site_links {
         display: grid;
         list-style-type: square;
     }
@@ -1159,10 +1597,345 @@ body {
     }
 }
 
-@media (max-width: 1080px){
-    .copyright{
+@media (max-width: 1080px) {
+    .copyright {
         width: 80vw;
         font-size: 5vw;
+    }
+}
+
+/*====================BLOG PAGE CSS=================================*/
+
+
+
+/*--======================================header for blog page===================================*/
+.container {
+    width: 100%;
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    word-spacing: 5px;
+    height: 100px;
+    width: 100%;
+}
+
+.container header .right {
+    padding-left: 10%;
+}
+
+.container header .right button {
+    height: 35px;
+    width: 130px;
+    color: #3562FF;
+    background: #FFFFFF;
+    border: 1px solid #1E4FFF;
+}
+
+.container header .left {
+    width: 72%;
+}
+
+.container header .left a {
+    padding-left: 2%;
+}
+
+/* <!--======================================Articles for blog page===================================--> */
+.container .articles {
+    display: flex;
+    border: 1px solid black;
+    gap: 2%;
+    width: 100%;
+}
+
+.container .articles .left img {
+    width: 90%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.container .articles .right .head .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.container .articles .right .head {
+    padding-top: 2%;
+}
+
+.container .articles .right .desc_logo {
+    width: 50%;
+    height: 50%;
+    margin-top: -13%;
+    margin-left: 19%;
+}
+
+.container .articles .right .head .desc_logo span {
+    margin-right: 10%;
+}
+
+.container .articles .right .head .desc_logo {
+    width: 100%;
+}
+
+.container .articles .right .desc_logo span:nth-child(1) {
+    font-weight: bold;
+}
+
+.container .articles .right .description h1 {
+    font-size: 25px;
+}
+
+.container .articles .right .description {
+    padding-top: 3%;
+}
+
+.container .articles .foot {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+}
+
+.container .articles .foot .left_foot {
+    width: 80%;
+    display: flex;
+    gap: 8%;
+}
+
+.container .articles .foot .right_foot {
+    display: flex;
+    gap: 5%;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .container .articles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container .articles .left img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .container header .left {
+        display: none;
+    }
+
+    .container header .right {
+        padding-left: 30%;
+    }
+}
+
+
+/********** End menu for all pages ***************/
+
+
+
+/****** Energie space style box beginning *****/
+
+.space-image{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 0;
+}
+.space-image img{
+    width: 100%;
+    height: 500px;
+}
+.greet-container{
+    width:100% ;
+    height:300px ;
+    background-color:aliceblue;
+    padding: 8px;
+ 
+    
+}
+#icone{
+    max-width: 700px;
+    height: 200px;
+   
+    margin: auto;
+    margin-top :20px;
+    position: relative;
+}
+.text{
+width: 50%;
+height: 100px;
+left:20%;
+color: rgb(233, 24, 24);
+font-size:3em;
+font-weight: bold;
+position: absolute;
+top: 25%;
+z-index: 2;
+}
+.radius-box{
+ width: 150px;
+ height: 150px;
+background-color:rgb(0, 94, 255) ;
+position: absolute;
+border-radius: 50%;
+left: 60%;
+top: 15%;
+z-index: 1;
+border: 3px solid red;
+
+}
+.radius-box img{
+    width: 60%;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+/* slide  box  style */
+.portfolio-container{
+    height: 800px;
+    background-color: rgb(227, 207, 244);
+}
+#startup{
+    max-width: 500px; 
+    height: 100px;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(85, 21, 145);
+}
+.slide-box{
+    max-width: 900px;
+    height: 600px;
+    margin: auto;
+    background-color: aliceblue;
+    position: relative;
+}
+.slide-box img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    /* transform: translate(-50% 50%); */
+    top: 0;
+    left: 0;
+    opacity:0;
+    transition: opacity .5s;
+
+
+
+}
+.slide-box .active{
+    opacity: 1;
+}
+.next ,.past{
+    color: rgb(17, 5, 5);
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+   transform: translate(50%);
+   cursor: pointer;
+  
+}
+.past :hover{
+    background-color: red;
+    color: white;
+}
+.next :hover{
+    background-color: red;
+    color: white;
+}
+
+.next{
+    right: -2rem;
+}
+.past{
+   left: -3rem;
+}
+
+
+@media(max-width:925px){
+    .slide-box{
+        width: 500px;
+        height: 500px;
+        margin: auto;
+
+    }
+    .slide-box img{
+        width: 500px;
+        height: 500px;
+    }
+    .menu_bottom{
+        bottom: -800px;
+    }
+}
+
+
+@media(max-width:685px){
+    .space-image{
+        width: 100vw;
+        height: 300px;
+    }
+    .space-image img{
+        width: 100vw;
+        height: 100%;
+    }
+    .greet-container{
+        width:100% ;
+        height:150px ;
+        background-color:aliceblue;
+       margin: auto;
+    }
+    .text{
+        width: 300px;
+        height: 50px;
+        font-size: 2em;
+        top: 30%;
+        left:20%;
+    }
+    .radius-box{
+        width: 110px;
+        height: 110px;
+        left: 50%;
+        top: 5%;
+        border: 2px solid yellow;
+    }
+    .portfolio-container{
+        height: 530px
+    }
+    #startup{
+        width: 300px;
+        height: 70px;
+        font-size: 2em;
+    }
+    .slide-box{
+        width: 100%;
+        height: 400px;
+        margin: auto;
+        padding: 3vh;
+
+    }
+    .slide-box img{
+        width: 80%;
+        height: 400px;
+        left: 40px;
+        padding-top: 3vh;
+    }
+    .past{
+        top: 100%;
+        left: 30%;
+        color: white;
+    }
+    .next{
+        top: 100%;
+        right: 30%;
+        color: white;
+    }
+    .menu_bottom{
+        bottom: -350px;
     }
 }
 
