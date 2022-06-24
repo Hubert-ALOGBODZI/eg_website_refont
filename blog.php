@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
+    <title>Energy Generation - Blog</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
 
-<!-- Google translate div -->
-<div class="google_trans">
+    <!-- Google translate div -->
+    <div class="google_trans">
         <div id="google_translate_element"></div>
     </div>
     <!-- Google translate div -->
@@ -27,7 +29,7 @@
         <li><a href="blog.php">
                 <img src="assets/blog.svg" class="icon_ng"><span>Blog</span></a></li>
     </div>
-    <div class="menu_bar" style="position: fixed;">
+    <div class="menu_bar">
         <div class="logo">
             <a href="index.html">
                 <img src="./assets/logo.png" alt="eg_logo" class="logo_img">
@@ -164,14 +166,16 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
         }
     </script>
 </body>
+
 </html>
