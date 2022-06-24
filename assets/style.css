@@ -176,7 +176,16 @@ body {
 }
 
 /********** End menu for all pages ***************/
+/* ScrollTop btn */
 
+.scrollbtn{
+    position: fixed;
+    bottom: 4vh;
+    right: 40px;
+    
+}
+
+/* End ScrollTop btn */
 /*********************  Home Page **************************/
 
 /* Home Banner */
