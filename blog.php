@@ -47,7 +47,7 @@
     <div class="container">
         <section class="articles">
             <div class="left">
-                <img src="/Users/imacg1/Desktop/EG_refont/eg_website_refont/assets/blogimg3.png ">
+                <img src="assets/blogimg3.png ">
             </div>
             <div class="right">
                 <div class="head">
