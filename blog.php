@@ -1,38 +1,44 @@
+<?php
+   include('blog_connectDB.php');
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $mail = $_POST['mail'];
+        $checkbox1 = $_POST['checkbox1'];
+        $checkbox2 = $_POST['checkbox2'];
+
+        $sql = "insert into mabase (name, mail, checkbox1, checkbox2)
+                 values('$name' , '$mail', '$checkbox1', '$checkbox2')";
+
+                 
+        $result = mysqli_query($conn,$sql);
+        if($result){
+            echo"record saved";
+            // header('location:blog2.php');
+        }else{
+            die(mysqli_error($conn));
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
-    <title>Energy Generation - Blog</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-
-    <!-- Google translate div -->
-    <div class="google_trans">
-        <div id="google_translate_element"></div>
-    </div>
-    <!-- Google translate div -->
-    <!-- Menu for all pages -->
-    <div class="menu_bar_bottom">
-        <li><a href="index.html" style="color: crimson;">
-                <img src="assets/house.svg" class="icon_ng"><span>Home</span></a></li>
-        <li><a href="business-energy.html">
-                <img src="assets/school.svg" class="icon_ng"><span>Business & Energy School</span></a></li>
-        <li><a href="energy-space.html">
-                <img src="assets/rocket.svg" class="icon_ng"><span>Energy Space</span></a></li>
-        <li><a href="blog.php">
-                <img src="assets/blog.svg" class="icon_ng"><span>Blog</span></a></li>
-    </div>
+    <div class="container">
+<!--============================== Menu for all pages=========================================== -->
     <div class="menu_bar">
         <div class="logo">
             <a href="index.html">
-                <img src="./assets/logo.png" alt="eg_logo" class="logo_img">
+                <img src="assets/logo.png" alt="eg_logo" class="logo_img">
             </a>
         </div>
         <div class="menu_items">
@@ -40,43 +46,133 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="business-energy.html">Business & Energy School</a></li>
                 <li><a href="energy-space.html">Energy Space</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </div>
+            <li class="lang">
+                <span>
+                    <a href="#">
+                        <img src="assets/FRA.png" alt="french img" class="langfr">
+                    </a>
+                </span>
+            </li>
+            <li class="lang">
+                <span>
+                    <a href="#">
+                        <img src="assets/GBR.png" alt="eng img" class="langen">
+                    </a>
+                </span>
+            </li>
         </div>
     </div>
+<!--======================================header for blog page===================================-->
+            <header>
+                <div class="left">
+                    <a href="#Posts">All Posts</a>
+                    <a href="#Scolaire">Formation Scolaire</a>
+                    <a href="#Formation">Formation</a>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button><a href="#">sign in / sign up</a></button>
+                </div>
+            </header>
+<!--======================================Articles for blog page===================================-->
+        <section class="articles" id="Posts">
+            <div class="left">
+                <img src="assets/blogimg3.png ">
+            </div>
+            <div class="right">
+                <div class="head">
+                    <div class="logo">
+                        <img src="assets/photo2.png " alt="">
+                    </div>
+                    <div class="desc_logo">
+                        <span>Odjouman Allagbe</span><br>
+                        <span>18 mars 2020</span>
+                        <span> 3 Min de lecture</span>
+                    </div>
+                </div>
+                <div class="description">
+                    <h1>Coup de projecteur sur le <br> parcours entrepreneuriat de <br> la Formation Solaire à Energy <br> Generation</h1>
+                    <p class="desc_right">Parce que le solaire représente une véritable <br> opportunité de création d'emplois pour les jeunes,<br> tout en participant au développement...</p>
+                </div>
+                <div class="foot">
+                    <div class="left_foot">
+                        <div class="vues">222 vues</div>
+                        <div class="commentaires">0 commentaire</div>
+                    </div>
+                    <div class="right_foot">
+                        <div class="love"><i class="fa-regular fa-heart"></i></div>
+                        <div class="nombre_love">40</div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br>
 
+        <section class="articles">
+            <div class="left">
+                <img src="assets/blogimg2.png  ">
+            </div>
+            <div class="right">
+                <div class="head">
+                    <div class="logo">
+                        <img src="assets/photo2.png " alt="">
+                    </div>
+                    <div class="desc_logo">
+                        <span>Odjouman Allagbe</span><br>
+                        <span>18 mars 2020</span>
+                        <span> 3 Min de lecture</span>
+                    </div>
+                </div>
+                <div class="description">
+                    <h1>Coup de projecteur sur le <br> parcours entrepreneuriat de <br> la Formation Solaire à Energy <br> Generation</h1>
+                    <p class="desc_right">Parce que le solaire représente une véritable <br> opportunité de création d'emplois pour les jeunes,<br> tout en participant au développement...</p>
+                </div>
+                <div class="foot">
+                    <div class="left_foot">
+                        <div class="vues">222 vues</div>
+                        <div class="commentaires">0 commentaire</div>
+                    </div>
+                    <div class="right_foot">
+                        <div class="love"><i class="fa-regular fa-heart"></i></div>
+                        <div class="nombre_love">40</div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br>
 
-    <div class="container">
         <section class="articles">
             <div class="left">
                 <img src="assets/blogimg3.png ">
             </div>
             <div class="right">
                 <div class="head">
-                    <div class="logo">LOGO
-                        <img src="photo 2.png" alt="">
+                    <div class="logo">
+                        <img src="assets/photo2.png " alt="">
                     </div>
-                    <div class="desc_logo">description</div>
-                    <div class="icon"></div>
+                    <div class="desc_logo">
+                        <span>Odjouman Allagbe</span><br>
+                        <span>18 mars 2020</span>
+                        <span> 3 Min de lecture</span>
+                    </div>
                 </div>
-                <h1>Titre</h1>
-                <p class="desc_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quidem repudiandae voluptate minima officiis perspiciatis fugiat maxime animi rerum, eum non ea!</p>
+                <div class="description">
+                    <h1>Coup de projecteur sur le <br> parcours entrepreneuriat de <br> la Formation Solaire à Energy <br> Generation</h1>
+                    <p class="desc_right">Parce que le solaire représente une véritable <br> opportunité de création d'emplois pour les jeunes,<br> tout en participant au développement...</p>
+                </div>
                 <div class="foot">
                     <div class="left_foot">
-                        <div class="vues">vues</div>
-                        <div class="commentaires">commentaires</div>
+                        <div class="vues">222 vues</div>
+                        <div class="commentaires">0 commentaire</div>
                     </div>
                     <div class="right_foot">
-                        <div class="nombre_love">nombre de love</div>
-                        <div class="love">love</div>
+                        <div class="love"><i class="fa-regular fa-heart"></i></div>
+                        <div class="nombre_love">40</div>
                     </div>
                 </div>
-
             </div>
         </section>
-    </div>
-
-    <!-- Start Footer section page -->
+         <!-- Start Footer section page -->
     <div class="footer_section">
         <div class="believers">
             <div class="believer_title">
@@ -110,21 +206,21 @@
             <div class="newsletter">
                 <div class="newsletter_gtitle">Newsletter</div>
                 <div class="newsletter_ltitle">Get our latest info, podcasts, advices...</div>
-                <form action="#" class="newsletter_form">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Email">
+                <form action="blog_db.php" method="post" class="newsletter_form" >
+                    <input type="text" placeholder="First name" name="name">
+                    <input type="text" placeholder="Email" name="mail">
                     <fieldset>
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="checkbox1">
                             <span>Je préfère recevoir les informations en français</span>
-                        </label>
+                        </label> 
                         <br>
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="checkbox2">
                             <span>I wish to receive the content in English</span>
                         </label>
                     </fieldset>
-                    <input type="button" class="subscribe_btn" value="Subscribe">
+                    <input type="submit" class="subscribe_btn" value="Subscribe" name="submit">
                 </form>
             </div>
             <div class="social_links_section">
@@ -152,9 +248,9 @@
                 </div>
                 <ul class="site_links">
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="business-energy.html">Programs</a></li>
-                    <li><a href="energy-space.html">Energy Space</a></li>
-                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="index.html">Programs</a></li>
+                    <li><a href="index.html">Energy Space</a></li>
+                    <li><a href="index.html">Blog</a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -163,9 +259,11 @@
         </div>
     </div>
     <!-- End Footer section page -->
+    </div>
+        <!-- End Footer section page -->
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -177,5 +275,4 @@
         }
     </script>
 </body>
-
 </html>

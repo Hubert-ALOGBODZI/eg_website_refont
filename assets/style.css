@@ -1770,11 +1770,11 @@ body {
 
 /* End Business Page */
 
-/*====================BLOG PAGE CSS=================================*/
+/*================================================================================BLOG PAGE CSS================================================================================================================*/
 
 
 
-/*--======================================header for blog page===================================*/
+/*--================================================================================header for blog page========================================================================================================*/
 .container {
     width: 100%;
 }
@@ -1807,17 +1807,17 @@ body {
     padding-left: 2%;
 }
 
-/* <!--======================================Articles for blog page===================================--> */
+/* <!--==========================================================================Articles for blog page======================================================================================================================--> */
 .container .articles {
     display: flex;
     border: 1px solid black;
-    gap: 2%;
+    gap: 10%;
     width: 100%;
 }
 
 .container .articles .left img {
-    width: 90%;
-    height: 450px;
+    width:620px;
+    height: 530px;
     object-fit: cover;
 }
 
@@ -1832,30 +1832,28 @@ body {
 }
 
 .container .articles .right .desc_logo {
-    width: 50%;
-    height: 50%;
-    margin-top: -13%;
-    margin-left: 19%;
+    margin-top: -10%;
+    margin-left: 15%;
 }
 
 .container .articles .right .head .desc_logo span {
     margin-right: 10%;
 }
 
-.container .articles .right .head .desc_logo {
-    width: 100%;
-}
 
 .container .articles .right .desc_logo span:nth-child(1) {
     font-weight: bold;
 }
 
 .container .articles .right .description h1 {
-    font-size: 25px;
+    font-size: 40px;
 }
 
-.container .articles .right .description {
-    padding-top: 3%;
+.container .articles .right .description{
+    transform: translateY(10%);
+}
+.container .articles .foot{
+    transform: translateY(20%);
 }
 
 .container .articles .foot {
@@ -1863,17 +1861,18 @@ body {
     height: 150px;
     width: 100%;
     align-items: center;
+    gap: 10%;
 }
 
 .container .articles .foot .left_foot {
     width: 80%;
     display: flex;
-    gap: 8%;
+    gap: 12%;
 }
 
 .container .articles .foot .right_foot {
     display: flex;
-    gap: 5%;
+    gap: 20%;
 }
 
 
@@ -1898,6 +1897,53 @@ body {
     .container header .right {
         padding-left: 30%;
     }
+}
+@media (max-width: 760px) {
+    .container .articles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container .articles .left img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .container header .left {
+        display: none;
+    }
+
+    .container header .right {
+        padding-left: 30%;
+    }
+    .container .articles .right .desc_logo {
+        margin-top: -13%;
+        margin-left: 23%;
+        font-size: 15px;
+    }
+    .container .articles .right .head .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-left: 4%;
+        margin-top: 3%;
+    }
+    .container .articles .right .description h1 {
+        font-size: 20px;
+    }
+    .container .articles .right .description{
+        margin-left: 10%;
+    }
+    .container .articles .foot {
+        height: 150px;
+        gap: 5%;
+    }
+    .container .articles .foot .right_foot {
+        gap: 5%;
+        margin-left: 2%;
+    }
+    
 }
 
 

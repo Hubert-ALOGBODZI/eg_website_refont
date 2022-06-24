@@ -1,9 +1,9 @@
 <?php
 
 $name = $_POST["name"];
-$mail= $_POST["mail"];
+$mail = $_POST["mail"];
 $checkbox1 = filter_input(INPUT_POST, "checkbox1", FILTER_VALIDATE_INT);
-$checkbox2= filter_input(INPUT_POST, "checkbox2", FILTER_VALIDATE_INT);
+$checkbox2 = filter_input(INPUT_POST, "checkbox2", FILTER_VALIDATE_INT);
 
 
 
@@ -13,7 +13,9 @@ $username = "root";
 $password = "";
 
 
+
 $conn = mysqli_connect ("$host","$username", "$password", "$dbname");
+
 
 
 // $conn = mysqli_connect (hostname : $host,
@@ -26,9 +28,8 @@ if(mysqli_connect_errno()){
     die("connection error: ".mysqli_connect_error());
 }               
 
-$sql = "INSERT INTO  EG_refont_blog (name,mail,checkbox1,checkbox2)
+$sql = "INSERT INTO EG_refont_blog (name, mail, checkbox1, checkbox2)
          VALUES(?,?,?,?)";
-
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -45,4 +46,27 @@ mysqli_stmt_bind_param($stmt, "ssii",
 
 
 mysqli_stmt_execute($stmt);
+echo "Record saved."; 
 
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+  
