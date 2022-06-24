@@ -1753,7 +1753,7 @@ body {
     
 }
 #icone{
-    max-width: 700px;
+    max-width: 800px;
     height: 200px;
    
     margin: auto;
@@ -1761,7 +1761,7 @@ body {
     position: relative;
 }
 .text{
-width: 50%;
+width: 55%;
 height: 100px;
 left:20%;
 color: rgb(233, 24, 24);
