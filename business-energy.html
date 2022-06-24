@@ -25,10 +25,10 @@
                 <img src="assets/school.svg" class="icon_ng"><span>Business & Energy School</span></a></li>
         <li><a href="energy-space.html">
                 <img src="assets/rocket.svg" class="icon_ng"><span>Energy Space</span></a></li>
-        <li><a href="blog.html">
+        <li><a href="blog.php">
                 <img src="assets/blog.svg" class="icon_ng"><span>Blog</span></a></li>
     </div>
-    <div class="menu_bar menu_bar_fixed">
+    <div class="menu_bar">
         <div class="logo">
             <a href="index.html">
                 <img src="./assets/logo.png" alt="eg_logo" class="logo_img">
@@ -39,7 +39,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="business-energy.html">Business & Energy School</a></li>
                 <li><a href="energy-space.html">Energy Space</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
             </div>
         </div>
     </div>
@@ -356,20 +356,40 @@
     </div>
     <!-- End Apply option section page -->
     <!-- Start Apply form section page -->
-    <div class="apply_form_section">
+    <div class="apply_form_section" id="form">
         <div class="apply_form_title">
             APPLY NOW !
         </div>
-        <form class="applyform" action="#">
-            <input type="text" placeholder="Name" class="grid_left">
-            <input type="text" placeholder="Surname" class="grid_right">
-            <input type="text" placeholder="Gender" class="grid_left">
-            <input type="text" placeholder="Number(with country code)" class="grid_right">
-            <input type="text" placeholder="Email" class="grid_max">
-            <input type="text" placeholder="Choosen theme" class="grid_max">
-            <input type="text" placeholder="Study Level" class="grid_max">
-            <input type="text" placeholder="Preferred Campus" class="grid_max">
-            <input type="button" value="Send" class="send_btn">
+        <form class="applyform" action="signup.php" method="post">
+            <input type="text" name="name" placeholder="Name" class="input grid_left">
+            <input type="text" name="surname" placeholder="Surname" class="input grid_right">
+            <select name="gender" class="input grid_left">
+                <option>Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <input type="number" name="phone" placeholder="Number(with country code)" class="input grid_right">
+            <input type="email" name="email" placeholder="Email" class="input grid_max">
+            <select name="domain" class="input grid_max">
+                <option>Choose theme</option>
+                <option value="energy">Energy</option>
+                <option value="Agrobus">Agro-Business</option>
+                <option value="health">HealthCare</option>
+            </select>
+            <select name="level" class="input grid_max">
+                <option>Study Level</option>
+                <option value="no high level">No high level</option>
+                <option value="bac">Bac</option>
+                <option value="bac2">Bac +2</option>
+                <option value="bac34">Bac +3/4</option>
+                <option value="doc">Doctorat</option>
+            </select>
+            <select name="campus" class="input grid_max">
+                <option>Preferred Campus</option>
+                <option value="frc">French Campus</option>
+                <option value="enc">English Campus</option>
+            </select>
+            <input type="submit" value="Send" class="send_btn">
         </form>
     </div>
     <!-- End Apply form section page -->
@@ -450,9 +470,9 @@
                 </div>
                 <ul class="site_links">
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html">Programs</a></li>
-                    <li><a href="index.html">Energy Space</a></li>
-                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="business-energy.html">Programs</a></li>
+                    <li><a href="energy-space.html">Energy Space</a></li>
+                    <li><a href="blog.php">Blog</a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -462,6 +482,8 @@
     </div>
     <!-- End Footer section page -->
 
+    
+    <script src="script.js"></script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
@@ -469,9 +491,6 @@
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
     </script>
-  <!-- JS file containning all scripts -->
-    <script src="script.js"></script>
-  <!-- End JS file containning all scripts -->
 </body>
 
 </html>

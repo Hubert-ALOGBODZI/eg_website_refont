@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     border: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -10,12 +11,16 @@ html {
     scrollbar-width: 6px;
 }
 
+::selection {
+    color: #551591;
+    background-color: #0977A6;
+}
+
 :focus {
     outline: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 5px;
     background-color: red;
 }
 
@@ -35,7 +40,7 @@ body {
 /**************************************/
 /* Google translate */
 
-.google_trans{
+.google_trans {
     position: fixed;
     top: 10vh;
     z-index: 100;
@@ -60,7 +65,7 @@ body {
     transition: .5s;
 }
 
-.nav_bar_white{
+.nav_bar_white {
     background-color: #fff;
 }
 
@@ -176,7 +181,16 @@ body {
 }
 
 /********** End menu for all pages ***************/
+/* ScrollTop btn */
 
+.scrollbtn {
+    position: fixed;
+    bottom: 4vh;
+    right: 40px;
+
+}
+
+/* End ScrollTop btn */
 /*********************  Home Page **************************/
 
 /* Home Banner */
@@ -203,7 +217,7 @@ body {
 }
 
 @media (max-width: 912px) {
-    .home_textcontainer{
+    .home_textcontainer {
         flex-wrap: wrap;
         row-gap: 30px;
         justify-content: center;
@@ -227,8 +241,8 @@ body {
     -webkit-text-stroke: 2px white;
 }
 
-@media (max-width: 912px){
-    .img_text{
+@media (max-width: 912px) {
+    .img_text {
         font-size: 5vw;
         width: 100vw;
     }
@@ -249,8 +263,8 @@ body {
     margin-bottom: 40px;
 }
 
-@media (max-width: 912px){
-    .about_title{
+@media (max-width: 912px) {
+    .about_title {
         font-size: 7vw;
         text-align: center;
     }
@@ -267,8 +281,8 @@ body {
     justify-content: left;
 }
 
-@media (max-width: 912px){
-    .about_text_container{
+@media (max-width: 912px) {
+    .about_text_container {
         text-align: center;
         justify-content: center;
     }
@@ -295,8 +309,8 @@ body {
     padding: 3vh 3vw;
 }
 
-@media (max-width: 912px){
-    .missionvision{
+@media (max-width: 912px) {
+    .missionvision {
         flex-wrap: wrap;
         justify-content: space-evenly;
         row-gap: 4vh;
@@ -337,8 +351,8 @@ body {
     min-width: 200px;
 }
 
-@media (max-width: 912px){
-    .visionphoto{
+@media (max-width: 912px) {
+    .visionphoto {
         order: 1;
         width: 50%;
     }
@@ -456,8 +470,8 @@ body {
     margin-bottom: 50px;
 }
 
-@media (max-width: 912px){
-    .business_title{
+@media (max-width: 912px) {
+    .business_title {
         font-size: 7vw;
     }
 }
@@ -475,8 +489,8 @@ body {
     gap: 30px;
 }
 
-@media (max-width: 912px){
-    .business_cont{
+@media (max-width: 912px) {
+    .business_cont {
         flex-wrap: wrap;
     }
 }
@@ -491,13 +505,14 @@ body {
     justify-content: space-around;
 }
 
-@media (max-width: 912px){
-    .business_text{
+@media (max-width: 912px) {
+    .business_text {
         padding-left: 6vw;
     }
 }
-@media (max-width: 512px){
-    .business_text{
+
+@media (max-width: 512px) {
+    .business_text {
         padding: 1vw;
         min-width: unset;
         width: 100%;
@@ -508,8 +523,8 @@ body {
     width: 50%;
 }
 
-@media (max-width: 912px){
-    .businessphoto{
+@media (max-width: 912px) {
+    .businessphoto {
         width: 70%;
         margin: 0 auto;
     }
@@ -550,8 +565,8 @@ body {
     margin-bottom: 50px;
 }
 
-@media (max-width: 912px){
-    .solar_title{
+@media (max-width: 912px) {
+    .solar_title {
         font-size: 7vw;
     }
 }
@@ -561,8 +576,8 @@ body {
     gap: 30px;
 }
 
-@media (max-width: 912px){
-    .solar_text{
+@media (max-width: 912px) {
+    .solar_text {
         flex-wrap: wrap;
     }
 }
@@ -577,15 +592,15 @@ body {
     justify-content: space-around;
 }
 
-@media (max-width: 912px){
-    .solar_textpar{
+@media (max-width: 912px) {
+    .solar_textpar {
         width: 100%;
         padding-left: 9vw;
         row-gap: 3vh;
     }
 }
 
-.solar_textpar::before{
+.solar_textpar::before {
     content: "";
     position: absolute;
     width: 30px;
@@ -599,7 +614,7 @@ body {
     width: 150%;
 }
 
-@media (max-width: 912px){
+@media (max-width: 912px) {
     .solar_textpar p:first-child {
         width: 100%;
     }
@@ -611,8 +626,8 @@ body {
     width: 60%;
 }
 
-@media (max-width: 912px){
-    .solarphoto{
+@media (max-width: 912px) {
+    .solarphoto {
         position: static;
         width: 100%;
     }
@@ -622,16 +637,16 @@ body {
     width: 100%;
 }
 
-.btn_solar{
+.btn_solar {
     width: fit-content;
 }
 
-.btn_solar button{
+.btn_solar button {
     margin: 0;
 }
 
-@media (max-width: 912px){
-    .btn_solar{
+@media (max-width: 912px) {
+    .btn_solar {
         margin: 30px auto 0;
     }
 }
@@ -639,7 +654,7 @@ body {
 /* end Solar section */
 /* Energy Sapce  */
 
-.energy_space_cont{
+.energy_space_cont {
     position: relative;
     padding: 100px 4vw;
     width: 100%;
@@ -647,48 +662,48 @@ body {
     color: #fff;
 }
 
-.energyspace_title{
+.energyspace_title {
     font-weight: 700;
     font-size: 64px;
     margin-bottom: 50px;
     width: fit-content;
 }
 
-@media (max-width: 912px){
-    .energyspace_title{
+@media (max-width: 912px) {
+    .energyspace_title {
         font-size: 7vw;
     }
 }
 
-.energyspace_title :nth-child(2){
+.energyspace_title :nth-child(2) {
     font-size: 24px;
     text-align: right;
 }
 
-@media (max-width: 912px){
-    .energyspace_title :nth-child(2){
+@media (max-width: 912px) {
+    .energyspace_title :nth-child(2) {
         font-size: 3vw;
     }
 }
 
-.energyspace_text{
+.energyspace_text {
     display: flex;
     gap: 5vw;
 }
 
-@media (max-width: 912px){
-    .energyspace_text{
+@media (max-width: 912px) {
+    .energyspace_text {
         flex-wrap: wrap;
     }
 }
 
-.working_img{
+.working_img {
     width: 56%;
     min-width: 300px;
 }
 
-@media (max-width: 912px){
-    .working_img{
+@media (max-width: 912px) {
+    .working_img {
         width: 100%;
         order: 1;
     }
@@ -698,7 +713,7 @@ body {
     width: 100%;
 }
 
-.spacetext{
+.spacetext {
     position: relative;
     font-size: 20px;
     width: 45%;
@@ -708,8 +723,8 @@ body {
     justify-content: space-around;
 }
 
-@media (max-width: 912px){
-    .spacetext{
+@media (max-width: 912px) {
+    .spacetext {
         width: 90%;
         margin: 0 auto;
     }
@@ -1227,9 +1242,8 @@ body {
     scrollbar-width: 0px;
 }
 
-.speaker_el::-webkit-scrollbar-thumb {
+.speaker_el::-webkit-scrollbar {
     width: 0px;
-    background-color: transparent;
 }
 
 .speaker {
@@ -1331,8 +1345,6 @@ body {
     font-size: 25px;
     padding: 5vh 7vw;
     gap: 110px;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 @media (max-width: 1080px) {
@@ -1378,7 +1390,6 @@ body {
     align-content: center;
     padding: 10vh 5vw 5vh;
     width: 100%;
-    overflow-y: scroll;
     background: url(formbkg.png);
     background-position: center;
     background-size: cover;
@@ -1406,7 +1417,7 @@ body {
     grid-template-columns: repeat(2, auto);
 }
 
-.applyform input:not(:last-child) {
+.applyform .input:not(:last-child) {
     text-indent: 20px;
     font-size: 20px;
     color: white;
@@ -1414,17 +1425,29 @@ body {
     background-color: transparent;
     border-bottom: 3px solid #0977A6;
     transition: .3s;
+    backdrop-filter: blur(20px);
 }
 
-.applyform input:not(:last-child):focus {
-    border-bottom: 3px solid crimson;
+.applyform .input option {
+    font-size: .7em;
+    color: white;
+    background: #323232;
+    filter: grayscale(100%);
 }
 
-.applyform input:not(:last-child):focus::placeholder {
+.applyform .input:not(:last-child):focus,
+.applyform .input:not(:last-child):hover,
+.applyform .input:not(:last-child):active {
+    border-bottom: 3px solid #727272;
+}
+
+.applyform .input:not(:last-child):focus::placeholder,
+.applyform .input:not(:last-child):hover::placeholder,
+.applyform .input:not(:last-child):active::placeholder {
     color: transparent;
 }
 
-.applyform input::placeholder {
+.applyform .input::placeholder {
     color: #ffffff;
     font-size: 22px;
     font-weight: bold;
@@ -1467,7 +1490,7 @@ body {
 }
 
 .send_btn:hover {
-    background-color: crimson;
+    background-color: #727272;
 }
 
 /********** End Apply form section page ***************/
@@ -1480,7 +1503,7 @@ body {
 }
 
 .believers {
-    width: 100vw;
+    width: 100%;
     display: grid;
 }
 
@@ -1548,7 +1571,7 @@ body {
 }
 
 @media (max-width: 800px) {
-    .footer{
+    .footer {
         padding: 2vh 2vw;
     }
 }
@@ -1905,16 +1928,14 @@ body {
 }
 
 #icone {
-    max-width: 700px;
-    height: 200px;
-
+    max-width: 800px;
     margin: auto;
     margin-top: 20px;
     position: relative;
 }
 
 .text {
-    width: 50%;
+    width: 55%;
     height: 100px;
     left: 20%;
     color: rgb(233, 24, 24);
@@ -1970,7 +1991,6 @@ body {
 
 .slide-box img {
     width: 100%;
-    height: 600px;
     position: absolute;
     /* transform: translate(-50% 50%); */
     top: 0;
