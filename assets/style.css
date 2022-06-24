@@ -10,6 +10,11 @@ html {
     scrollbar-width: 6px;
 }
 
+::selection{
+    color:#551591;
+    background-color: #0977A6;
+}
+
 :focus {
     outline: none;
 }
@@ -1415,7 +1420,7 @@ body {
     grid-template-columns: repeat(2, auto);
 }
 
-.applyform input:not(:last-child) {
+.applyform .input:not(:last-child) {
     text-indent: 20px;
     font-size: 20px;
     color: white;
@@ -1423,17 +1428,31 @@ body {
     background-color: transparent;
     border-bottom: 3px solid #0977A6;
     transition: .3s;
+    backdrop-filter: blur(20px);
 }
 
-.applyform input:not(:last-child):focus {
-    border-bottom: 3px solid crimson;
+.applyform .input option{
+    font-size: .7em;
+    color: white;
+    background: #323232;
+    filter: grayscale(100%);
 }
 
-.applyform input:not(:last-child):focus::placeholder {
+.applyform .input:not(:last-child):focus,
+.applyform .input:not(:last-child):hover,
+.applyform .input:not(:last-child):active
+ {
+    border-bottom: 3px solid #727272;
+}
+
+.applyform .input:not(:last-child):focus::placeholder,
+.applyform .input:not(:last-child):hover::placeholder,
+.applyform .input:not(:last-child):active::placeholder
+{
     color: transparent;
 }
 
-.applyform input::placeholder {
+.applyform .input::placeholder {
     color: #ffffff;
     font-size: 22px;
     font-weight: bold;
@@ -1476,7 +1495,7 @@ body {
 }
 
 .send_btn:hover {
-    background-color: crimson;
+    background-color: #727272;
 }
 
 /********** End Apply form section page ***************/

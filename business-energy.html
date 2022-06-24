@@ -356,20 +356,40 @@
     </div>
     <!-- End Apply option section page -->
     <!-- Start Apply form section page -->
-    <div class="apply_form_section">
+    <div class="apply_form_section" id="form">
         <div class="apply_form_title">
             APPLY NOW !
         </div>
-        <form class="applyform" action="#">
-            <input type="text" placeholder="Name" class="grid_left">
-            <input type="text" placeholder="Surname" class="grid_right">
-            <input type="text" placeholder="Gender" class="grid_left">
-            <input type="text" placeholder="Number(with country code)" class="grid_right">
-            <input type="text" placeholder="Email" class="grid_max">
-            <input type="text" placeholder="Choosen theme" class="grid_max">
-            <input type="text" placeholder="Study Level" class="grid_max">
-            <input type="text" placeholder="Preferred Campus" class="grid_max">
-            <input type="button" value="Send" class="send_btn">
+        <form class="applyform" action="signup.php" method="post">
+            <input type="text" name="name" placeholder="Name" class="input grid_left">
+            <input type="text" name="surname" placeholder="Surname" class="input grid_right">
+            <select name="gender" class="input grid_left">
+                <option>Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <input type="number" name="phone" placeholder="Number(with country code)" class="input grid_right">
+            <input type="email" name="email" placeholder="Email" class="input grid_max">
+            <select name="domain" class="input grid_max">
+                <option>Choose theme</option>
+                <option value="energy">Energy</option>
+                <option value="Agrobus">Agro-Business</option>
+                <option value="health">HealthCare</option>
+            </select>
+            <select name="level" class="input grid_max">
+                <option>Study Level</option>
+                <option value="no high level">No high level</option>
+                <option value="bac">Bac</option>
+                <option value="bac2">Bac +2</option>
+                <option value="bac34">Bac +3/4</option>
+                <option value="doc">Doctorat</option>
+            </select>
+            <select name="campus" class="input grid_max">
+                <option>Preferred Campus</option>
+                <option value="frc">French Campus</option>
+                <option value="enc">English Campus</option>
+            </select>
+            <input type="submit" value="Send" class="send_btn">
         </form>
     </div>
     <!-- End Apply form section page -->
