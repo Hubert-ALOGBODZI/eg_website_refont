@@ -13,17 +13,26 @@
 </head>
 
 <body>
+    <!-- Google translate div -->
+    <div class="google_trans">
+        <div id="google_translate_element"></div>
+    </div>
+    <!-- Google translate div -->
     <!-- Menu for all pages -->
     <div class="menu_bar_bottom">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="business-energy.html">Business & Energy School</a></li>
-        <li><a href="energy-space.html">Energy Space</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html">
+                <img src="assets/house.svg" class="icon_ng"><span>Home</span></a></li>
+        <li><a href="business-energy.html">
+                <img src="assets/school.svg" class="icon_ng"><span>Business & Energy School</span></a></li>
+        <li><a href="energy-space.html"  style="color: crimson;">
+                <img src="assets/rocket.svg" class="icon_ng"><span>Energy Space</span></a></li>
+        <li><a href="blog.html">
+                <img src="assets/blog.svg" class="icon_ng"><span>Blog</span></a></li>
     </div>
-    <div class="menu_bar">
+    <div class="menu_bar menu_bar_fixed">
         <div class="logo">
             <a href="index.html">
-                <img src="assets/logo.png" alt="eg_logo" class="logo_img">
+                <img src="./assets/logo.png" alt="eg_logo" class="logo_img">
             </a>
         </div>
         <div class="menu_items">
@@ -33,22 +42,9 @@
                 <li><a href="energy-space.html">Energy Space</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </div>
-            <li class="lang">
-                <span>
-                    <a href="#">
-                        <img src="assets/FRA.png" alt="french img" class="langfr">
-                    </a>
-                </span>
-            </li>
-            <li class="lang">
-                <span>
-                    <a href="#">
-                        <img src="assets/GBR.png" alt="eng img" class="langen">
-                    </a>
-                </span>
-            </li>
         </div>
     </div>
+
     <!-- End Menu for all pages -->
 
     <!-- beginning space box -->
@@ -107,7 +103,7 @@
        
     </section>
 
-    <!-- footer section  -->
+    <!-- Start Footer section page -->
     <div class="footer_section">
         <div class="believers">
             <div class="believer_title">
@@ -149,6 +145,7 @@
                             <input type="checkbox">
                             <span>Je préfère recevoir les informations en français</span>
                         </label> 
+
                         <br>
                         <label>
                             <input type="checkbox">
@@ -193,7 +190,15 @@
             </div>
         </div>
     </div>
-    <!-- end of footer section -->
+    <!-- End Footer section page -->
+    
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
 
 <!-- slidehow js -->
 <script>
