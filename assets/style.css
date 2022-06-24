@@ -21,7 +21,6 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 5px;
     background-color: red;
 }
 
@@ -1243,9 +1242,8 @@ body {
     scrollbar-width: 0px;
 }
 
-.speaker_el::-webkit-scrollbar-thumb {
+.speaker_el::-webkit-scrollbar {
     width: 0px;
-    background-color: transparent;
 }
 
 .speaker {
@@ -1347,8 +1345,6 @@ body {
     font-size: 25px;
     padding: 5vh 7vw;
     gap: 110px;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 @media (max-width: 1080px) {
@@ -1394,7 +1390,6 @@ body {
     align-content: center;
     padding: 10vh 5vw 5vh;
     width: 100%;
-    overflow-y: scroll;
     background: url(formbkg.png);
     background-position: center;
     background-size: cover;
@@ -1508,7 +1503,7 @@ body {
 }
 
 .believers {
-    width: 100vw;
+    width: 100%;
     display: grid;
 }
 
