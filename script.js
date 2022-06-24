@@ -11,4 +11,12 @@ window.addEventListener('scroll', () => {
 })
 
 // End animation for the navbar animation
-// ScroolTrigger Animation
+// Start ScrollTop btn
+
+var scrollBtn = document.createElement('div');
+scrollBtn.classList.add('scrollbtn');
+scrollBtn.innerHTML='<h2 style="font-weight:bold";>T</h2>';
+document.appendChild(scrollBtn);
+
+
+// End ScrollTop btn
