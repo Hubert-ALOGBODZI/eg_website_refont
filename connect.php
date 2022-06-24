@@ -1,17 +1,9 @@
 <?php
 
-$conn =new mysqli("localhost","root", "", "Blog_DB");
-
-if($conn){
-    echo"connection successful";
-}else{
-    die(mysqli_error($conn));
-}
-
-$servername = "localhost";
-$username = "phpmyadmin";
-$password = "root";
-$db = "egdb";
+$servername = "sql101.epizy.com";
+$username = "epiz_31996348";
+$password = "NfJJd938McWh5gN";
+$db = "epiz_31996348_energy_db";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
@@ -21,6 +13,7 @@ try {
 } catch (PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
+
 ?>
 
 <?php
