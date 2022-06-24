@@ -26,7 +26,7 @@ if(mysqli_connect_errno()){
     die("connection error: ".mysqli_connect_error());
 }               
 
-$sql = "INSERT INTO  EG_refont_blog (name, mail, checkbox1, checkbox2)
+$sql = "INSERT INTO  EG_refont_blog (name,mail,checkbox1,checkbox2)
          VALUES(?,?,?,?)";
 
 
