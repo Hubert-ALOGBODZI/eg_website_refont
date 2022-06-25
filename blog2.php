@@ -1,27 +1,27 @@
 <?php
-   include('blog_connectDB.php');
-    if(isset($_POST['submit'])){
-        $name = $_POST['name'];
-        $mail = $_POST['mail'];
-        $checkbox1 = $_POST['checkbox1'];
-        $checkbox2 = $_POST['checkbox2'];
+//    include('connect.php');
+//     if(isset($_POST['submit'])){
+//         $name = $_POST['name'];
+//         $mail = $_POST['mail'];
+//         $checkbox1 = $_POST['checkbox1'];
+//         $checkbox2 = $_POST['checkbox2'];
 
-        $sql = "insert into mabase (name, mail, checkbox1, checkbox2)
-                 values('$name' , '$mail', '$checkbox1', '$checkbox2')";
+//         $sql = "insert into mabase (name, mail, checkbox1, checkbox2)
+//                  values('$name' , '$mail', '$checkbox1', '$checkbox2')";
 
                  
-        $result = mysqli_query($conn,$sql);
-        if($result){
-            echo"record saved";
-            // header('location:blog2.php');
-        }else{
-            die(mysqli_error($conn));
-        }
-    }
+//         $result = mysqli_query($conn,$sql);
+//         if($result){
+//             echo"record saved";
+//             // header('location:blog2.php');
+//         }else{
+//             die(mysqli_error($conn));
+//         }
+//     }
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +33,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
+    <div class="container"> -->
 <!--============================== Menu for all pages=========================================== -->
+    <!-- <div class="menu_bottom">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="business-energy.html">Business & Energy School</a></li>
+        <li><a href="energy-space.html">Energy Space</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </div>
     <div class="menu_bar">
         <div class="logo">
             <a href="index.html">
@@ -63,9 +69,9 @@
                 </span>
             </li>
         </div>
-    </div>
+    </div> -->
 <!--======================================header for blog page===================================-->
-            <header>
+            <!-- <header>
                 <div class="left">
                     <a href="#Posts">All Posts</a>
                     <a href="#Scolaire">Formation Scolaire</a>
@@ -75,9 +81,9 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <button><a href="#">sign in / sign up</a></button>
                 </div>
-            </header>
+            </header> -->
 <!--======================================Articles for blog page===================================-->
-        <section class="articles" id="Posts">
+        <!-- <section class="articles" id="Posts">
             <div class="left">
                 <img src="assets/blogimg3.png ">
             </div>
@@ -171,9 +177,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
          <!-- Start Footer section page -->
-    <div class="footer_section">
+    <!-- <div class="footer_section">
         <div class="believers">
             <div class="believer_title">
                 They believe in us !
@@ -257,13 +263,13 @@
                 © 2022 - Energy Generation - All rights reserved.
             </div>
         </div>
-    </div>
+    </div> --> 
     <!-- End Footer section page -->
-    </div>
+    <!-- </div> -->
         <!-- End Footer section page -->
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -275,4 +281,4 @@
         }
     </script>
 </body>
-</html>
+</html> -->

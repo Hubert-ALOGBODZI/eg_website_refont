@@ -1,23 +1,21 @@
 <?php
 
 $name = $_POST["name"];
-$Message = $_POST["Message"];
-$priority = filter_input(INPUT_POST, "priority", FILTER_VALIDATE_INT);
-$type = filter_input(INPUT_POST, "type", FILTER_VALIDATE_INT);
-$terms = filter_input(INPUT_POST, "terms", FILTER_VALIDATE_BOOL);
+$mail = $_POST["mail"];
+$checkbox1 = filter_input(INPUT_POST, "checkbox1", FILTER_VALIDATE_INT);
+$checkbox2 = filter_input(INPUT_POST, "checkbox2", FILTER_VALIDATE_INT);
 
 
-if( ! $terms) {
-    die("Terms most be accepted");
-}
 
 $host = "localhost";
-$dbname = "MabaseD";
+$dbname = "Blog_DB";
 $username = "root";
 $password = "";
 
 
+
 $conn = mysqli_connect ("$host","$username", "$password", "$dbname");
+
 
 
 // $conn = mysqli_connect (hostname : $host,
@@ -30,9 +28,8 @@ if(mysqli_connect_errno()){
     die("connection error: ".mysqli_connect_error());
 }               
 
-$sql = "INSERT INTO  mabase (name, body, priority, type)
+$sql = "INSERT INTO EG_refont_blog (name, mail, checkbox1, checkbox2)
          VALUES(?,?,?,?)";
-
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -43,10 +40,33 @@ if( ! mysqli_stmt_prepare($stmt , $sql)) {
 
 mysqli_stmt_bind_param($stmt, "ssii",
                         $name,
-                        $Message,
-                        $priority,
-                        $type);
+                        $mail,
+                        $checkbox1,
+                        $checkbox2);
 
 
 mysqli_stmt_execute($stmt);
-echo "Record saved.";   
+echo "Record saved."; 
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+  
