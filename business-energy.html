@@ -25,8 +25,16 @@
                 <img src="assets/school.svg" class="icon_ng"><span>Business & Energy School</span></a></li>
         <li><a href="energy-space.html">
                 <img src="assets/rocket.svg" class="icon_ng"><span>Energy Space</span></a></li>
-        <li><a href="blog.php">
-                <img src="assets/blog.svg" class="icon_ng"><span>Blog</span></a></li>
+        <li>
+            <a href="blog.php">
+                <img src="assets/blog.svg" class="icon_ng"><span>Blog</span>
+            </a>
+        </li>
+        <li>
+            <a href="mentor.html" class="mentor">
+                <img src="assets/mentor.svg" class="icon_ng"><span>Mentoring Program</span>
+            </a>
+        </li>
     </div>
     <div class="menu_bar">
         <div class="logo">
@@ -40,9 +48,15 @@
                 <li><a href="business-energy.html">Business & Energy School</a></li>
                 <li><a href="energy-space.html">Energy Space</a></li>
                 <li><a href="blog.php">Blog</a></li>
+                <li>
+                    <a href="mentor.html" class="mentor">
+                        Mentoring Program
+                    </a>
+                </li>
             </div>
         </div>
     </div>
+
     <!-- End Menu for all pages -->
     <!-- Start Energy Home page-->
     <div class="bus_home">
@@ -428,21 +442,22 @@
             <div class="newsletter">
                 <div class="newsletter_gtitle">Newsletter</div>
                 <div class="newsletter_ltitle">Get our latest info, podcasts, advices...</div>
-                <form action="#" class="newsletter_form">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Email">
+                <form action="news.php" method="post" class="newsletter_form">
+                    <input type="text" placeholder="First name" name="name">
+                    <input type="text" placeholder="Email" name="mail">
                     <fieldset>
-                        <label>
-                            <input type="checkbox">
+                        <legend>Campus Language</legend>
+                        <label class="radio">
+                            <input type="radio" name="lang" value="fr">
                             <span>Je préfère recevoir les informations en français</span>
                         </label>
                         <br>
-                        <label>
-                            <input type="checkbox">
+                        <label class="radio">
+                            <input type="radio" name="lang" value="en">
                             <span>I wish to receive the content in English</span>
                         </label>
                     </fieldset>
-                    <input type="button" class="subscribe_btn" value="Subscribe">
+                    <input type="submit" class="subscribe_btn" value="Subscribe" name="submit">
                 </form>
             </div>
             <div class="social_links_section">
