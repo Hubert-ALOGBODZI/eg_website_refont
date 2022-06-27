@@ -2252,12 +2252,12 @@ body {
     border-radius: 30px;
 }
 
-.request_text{
+.request_text {
     font-size: 50px;
     font-weight: 800;
 }
 
-.backtohome{
+.backtohome {
     padding: 10px 20px;
     color: #f00;
     background-color: #fff;
@@ -2270,9 +2270,319 @@ body {
 
 .backtohome:hover,
 .backtohome:focus,
-.backtohome:active{
-    color: white;
+.backtohome:active {
+    color: hsl(0, 0%, 100%);
     background-color: orangered;
 }
 
 /* *******************Newsletters page desgin********************* */
+
+/********** mentor page start ***************/
+
+.imagedefond {
+    width: 100vw;
+}
+
+.imagedefond img {
+    width: 100%;
+}
+
+.helptitle {
+    font-size: 67px;
+    font-weight: 1000;
+    margin: 60px auto;
+    text-align: center;
+    color: #0075ff;
+}
+
+@media (max-width: 1150px) {
+    .helptitle {
+        font-size: 7vw;
+    }
+}
+
+.storiesection {
+    padding: 70px 4vw;
+    background-color: rgba(255, 80, 80, 0.87);
+    background-blend-mode: darken;
+    color: white;
+}
+
+.storietitle {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+@media (max-width: 1150px) {
+    .storietitle {
+        font-size: 30px;
+    }
+}
+
+.storieflexel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+@media (max-width: 1150px) {
+    .storieflexel {
+        flex-direction: column;
+    }
+}
+
+.storietext {
+    width: 50%;
+    display: grid;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 3px;
+    align-content: space-evenly;
+}
+
+@media (max-width: 1150px) {
+    .storietext {
+        width: 100%;
+    }
+}
+
+.storietext p {
+    width: 87%;
+}
+
+@media (max-width: 1150px) {
+    .storietext p {
+        width: 100%;
+    }
+}
+
+.storieimage {
+    width: 50%;
+}
+
+@media (max-width: 1150px) {
+    .storieimage {
+        width: 80%;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .storieimage {
+        width: 100%;
+    }
+}
+
+.storieimage img {
+    width: 100%;
+}
+
+.rolesection {
+    color: white;
+    padding: 90px 4vw;
+    background-color: #0075ff;
+}
+
+.roletitlecont {
+    display: grid;
+}
+
+.role_gtitle {
+    width: fit-content;
+    position: relative;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.role_gtitle span {
+    position: absolute;
+    font-size: 14px;
+    right: 0;
+    top: 90%;
+}
+
+.role_ltitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 70px;
+    position: relative;
+}
+
+@media (max-width: 1150px) {
+    .role_ltitle {
+        margin-top: 50px;
+    }
+}
+
+.role_ltitle::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: white;
+    left: 0;
+    top: 50%;
+}
+
+.roletext1 {
+    padding: 30px 4vw;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1150px) {
+    .roletext1 {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+.roletext1_left,
+.roletext1btn_cont {
+    width: 50%;
+}
+
+@media (max-width: 1150px) {
+    .roletext1_left,
+    .roletext1btn_cont {
+        width: 100%;
+    }
+}
+
+.roletext1btn_cont {
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.roletext1btn {
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 31px;
+    font-weight: bold;
+    color: #0075ff;
+    background-color: white;
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.roletext1btn:hover,
+.roletext1btn:focus,
+.roletext1btn:active {
+    color: white;
+    background-color: #3c66ff;
+}
+
+.roletextimage_cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    column-gap: 40px;
+}
+
+@media (max-width: 1150px) {
+    .roletextimage_cont {
+        flex-direction: column;
+    }
+}
+
+.roletextimage {
+    width: 50%;
+}
+
+@media (max-width: 1150px) {
+    .roletextimage {
+        width: 100%;
+    }
+}
+
+.roletextimage img {
+    width: 100%;
+}
+
+.roletext2 {
+    width: 40%;
+    display: grid;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1150px) {
+    .roletext2 {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+.requirement {
+    font-weight: 400;
+    padding-left: 5%;
+    letter-spacing: 0;
+}
+
+.applysection {
+    display: flex;
+    align-items: center;
+    padding: 50px 4vw;
+    background-color: #F4F4F4;
+}
+
+@media (max-width: 1150px) {
+    .applysection {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+.applytitle {
+    width: 50%;
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    color: #0075ff;
+}
+
+.applybutton {
+    width: 50%;
+    display: grid;
+}
+
+@media (max-width: 1150px) {
+    .applybutton,
+    .applytitle {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .applytitle{
+        font-size: 8vw;
+    }
+}
+
+.applybutton button {
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 31px;
+    font-weight: 900;
+    background-color: #0075ff;
+    color: white;
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.applybutton button:hover,
+.applybutton button:focus,
+.applybutton button:active {
+    background-color: rgb(255, 255, 255);
+    color: #3c66ff;
+}
+
+/********** mentor page end ***************/
