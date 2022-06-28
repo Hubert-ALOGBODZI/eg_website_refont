@@ -225,15 +225,15 @@ body {
     padding: 5px;
     border-radius: 4px;
     text-align: center;
-  }
+}
 
-  .myBtn_none{
+.myBtn_none {
     display: block;
-  }
-  
-  .myBtn:hover {
+}
+
+.myBtn:hover {
     background-color: #555;
-  }
+}
 
 /* End ScrollTop btn */
 /*********************  Home Page **************************/
@@ -258,12 +258,17 @@ body {
     transform: translatex(-50%);
     display: flex;
     column-gap: 40px;
+    width: 100%;
 }
 
 @media (max-width: 912px) {
     .home_textcontainer {
         justify-content: center;
         text-align: center;
+    }
+}@media (max-width: 502px) {
+    .home_textcontainer {
+        bottom: 24vh;
     }
 }
 
@@ -272,6 +277,7 @@ body {
     font-weight: 900;
     color: white;
     text-align: center;
+    width: 100%;
     letter-spacing: 3px;
 }
 
@@ -1709,6 +1715,7 @@ body {
         justify-content: center;
         margin-bottom: 60px;
         width: 80vw;
+        margin: 0px auto 50px;
     }
 }
 
@@ -1725,19 +1732,17 @@ body {
 
 .socials_link a {
     transition: .3s;
-    width: 30px;
+    width: 60px;
 }
 
 .socials_link a:hover {
     transform: scale(1.2);
 }
 
-@media (max-width: 580px) {
-
-    .social_link a img {
-        width: 60%;
-    }
+.socials_link a img {
+    width: 100%;
 }
+
 
 .all_links {
     display: block;
