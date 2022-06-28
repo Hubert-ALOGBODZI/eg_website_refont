@@ -21,6 +21,14 @@ html {
     outline: none;
 }
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
     background-color: red;
 }
@@ -1295,7 +1303,7 @@ body {
 }
 
 .speaker_el::-webkit-scrollbar {
-    width: 0px;
+    height: 0px;
 }
 
 .speaker {
