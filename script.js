@@ -3,12 +3,32 @@
 const navbar = document.querySelector(".menu_bar");
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.screen.height * 2 / 3 - 200) {
+  if (window.scrollY > window.screen.height / 3) {
     navbar.classList.add('nav_bar_white');
   } else {
     navbar.classList.remove('nav_bar_white');
   }
 });
+
+// Just an animation for the navbar animation
+
+// Start ScrollTop btn
+const scrollBtn = document.querySelector("#myBtn");
+console.log(scrollBtn);
+window.onscroll = function() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        scrollBtn.classList.add('myBtn_none');
+      } else {
+        scrollBtn.classList.remove('myBtn_none');
+      }
+}
+
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo(0,0);
+})
+// End ScrollTop btn
+
+
 
 // Img slide script
 
@@ -40,7 +60,7 @@ function enleverActiveImages(){
     }
     enleverActiveImages();
     img_slider[etape].classList.add('active');
-})
+});
 past.addEventListener('click',function(){
     etape--;
     if(etape< 0){
@@ -48,7 +68,7 @@ past.addEventListener('click',function(){
      }
      enleverActiveImages();
      img_slider[etape].classList.add('active');
-})
+});
 
 // on va utiliser la function setInterval pour faire defiler les image automatquement 
 setInterval(function() {
@@ -58,18 +78,9 @@ setInterval(function() {
     }
     enleverActiveImages();
     img_slider[etape].classList.add('active');
-},3000)
+},3000);
 
 
 // End Img slide script
 
 // End animation for the navbar animation
-// Start ScrollTop btn
-
-// var scrollBtn = document.createElement('div');
-// scrollBtn.classList.add('scrollbtn');
-// scrollBtn.innerHTML='<h2 style="font-weight:bold";>T</h2>';
-// document.appendChild(scrollBtn);
-
-
-// End ScrollTop btn

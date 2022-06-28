@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<button id="myBtn" class="myBtn">Top</button>
     <div class="container">
         <!-- Menu for all pages -->
         <div class="menu_bar_bottom">
