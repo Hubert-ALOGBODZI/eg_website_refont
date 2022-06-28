@@ -217,7 +217,7 @@ body {
 /* ScrollTop btn */
 
 .myBtn {
-    display: none;
+    opacity: 0;
     position: fixed;
     bottom: 13vh;
     right: 3vw;
@@ -233,10 +233,11 @@ body {
     padding: 5px;
     border-radius: 4px;
     text-align: center;
+    transition: .3s;
 }
 
 .myBtn_none {
-    display: block;
+    opacity: 1;
 }
 
 .myBtn:hover {
@@ -815,20 +816,11 @@ body {
     margin: 40px auto;
 }
 
-.busbann_img_logo {
-    width: fit-content;
-    margin-right: 20px;
-    min-width: 120px;
-    max-width: 450px;
-    padding: max(13px, min(2vw, 30px)) max(20px, min(3vw, 30px));
-    background-color: #f3f3f3;
-}
 
 .busbann_text_cont {
     font-size: max(30px, min(6vw, 80px));
     font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: #86837F 2px;
+    color:  #86837F;
 }
 
 .bus_title_text {
@@ -853,7 +845,7 @@ body {
 }
 
 .gray_color {
-    color: #BAB3A8;
+    color: #86837F;
 }
 
 .bus_little_text {
@@ -886,6 +878,10 @@ body {
     .bus_little_text::before {
         display: none;
     }
+}
+
+.bus_elem{
+    position: relative;
 }
 
 /********** End Energy Home page ***************/
@@ -1056,6 +1052,7 @@ body {
 .benefit_text_par {
     font-size: 66px;
     font-weight: 700;
+    color: white;
 }
 
 @media (max-width: 1080px) {
