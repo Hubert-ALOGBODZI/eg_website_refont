@@ -1,19 +1,7 @@
 
 gsap.registerPlugin(ScrollTrigger)
-// **********************************************************************
-window.addEventListener('click',()=>{
-  gsap.from(".menu_bar",{
-    duration:1, y:'-100%',ease:'linear'
-  })
 
-  gsap.from('.homepage_banner',{
-    opacity:0, duration:1, ease:'power2-out'
-  })
-  
-  gsap.from('.img_text',{
-    y: 100,opacity:0, duration:1.3, ease:'power2-in'
-  })
-})
+// **********************************************************************
 
 window.addEventListener('DOMContentLoaded',()=>{
   gsap.from(".menu_bar",{
