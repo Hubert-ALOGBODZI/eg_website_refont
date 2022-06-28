@@ -212,8 +212,6 @@ const TLM = gsap.timeline({
   scrollTrigger:{
     trigger: stagger_el_foot,
     toggleActions:"restart pause reverse pause",
-    start: "top 100%",
-    end: "top 10%",
     scrub: 1
   }
 });
